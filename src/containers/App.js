@@ -1,12 +1,12 @@
 import React from 'react'
-import Tab from "../components/Tab/Tab";
-import '../common/reset.less'
+import Movie from "./movie/Movie";
+
 
 export default class App extends React.Component {
     render() {
         return <div>
             {this.props.children}
-            <Tab/>
+            <Movie/>
         </div>
     }
 }
