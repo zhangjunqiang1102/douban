@@ -1,4 +1,3 @@
 node_modules
-resource
-package.json
 yarn-error.log
+.idea
