@@ -24,4 +24,4 @@ ReactDOM.render(
         </Router>
         </App>
     </Provider>
-    , window.root);
+    , window.root)
