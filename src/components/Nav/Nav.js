@@ -15,6 +15,7 @@ export default class Nav extends  React.Component{
                     <NavLink to= {'/book'}>图书</NavLink>
                     <NavLink to= {'/radio'}>广播</NavLink>
                     <NavLink to= {'/group'}>小组</NavLink>
+                    <NavLink to= {'/search'}>搜索</NavLink>
                     </div>
                 </div>
             </div>
