@@ -10,7 +10,7 @@ import Home from "./containers/Home/Home";
 import Book from "./containers/Book/Book";
 import Group from "./containers/group/Group";
 import App from "./containers/App";
-import Search from "./containers/search/Search";
+
 ReactDOM.render(
     <Provider store={store}>
         <App>
@@ -24,4 +24,4 @@ ReactDOM.render(
         </Router>
         </App>
     </Provider>
-    , window.root)
+    , window.root);
