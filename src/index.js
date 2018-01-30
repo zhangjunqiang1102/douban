@@ -20,4 +20,4 @@ ReactDOM.render(
             </Switch>
         </Router>
     </Provider>
-    , window.root);
+    , window.root)
