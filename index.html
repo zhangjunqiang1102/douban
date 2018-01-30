@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>豆瓣-App</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_558353_j5ecn24apixxn7b9.css">
+
+
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <script>
+      ~function () {
+        let computed = function () {
+          //=>DES-W:设计稿宽度 DEV-W:设备的宽度
+          let desW = 640;
+          let devW = document.documentElement.clientWidth;
+          if (devW >= 640) {
+            document.documentElement.style.fontSize = '100px';
+            return;
+          }
+          document.documentElement.style.fontSize = devW / desW * 100 + 'px';
+        };
+        computed();
+        window.addEventListener('resize', computed, false);
+      }();
+    </script>
 </head>
 <body>
   <div id="root">
