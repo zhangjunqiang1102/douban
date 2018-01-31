@@ -13,8 +13,12 @@ import Group from "./containers/Group/Group";
 import App from "./containers/App";
 
 
-import Search from './containers/Search/Search';
+
+import Search from './containers/Search/Search'
+import Detail from "./containers/Detail/Detail";
+
 import Radio from "./containers/Radio/Radio";
+
 
 ReactDOM.render(
     <Provider store={store}>
@@ -24,6 +28,7 @@ ReactDOM.render(
                 <Route path="/" exact={true} component={Home}/>
                 <Route path='/movie' component={Movie}/>
                 <Route path='/book' component={Book}/>
+                <Route path="/detail" component={Detail}/>
                 <Route path='/group' component={Group}/>
                 <Route path='/radio' component={Radio}/>
                 <Route path='/search' component={Search}/>
