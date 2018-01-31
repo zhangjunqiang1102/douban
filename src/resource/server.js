@@ -36,7 +36,7 @@ let movie = require('./mock/movie');
 
 app.get('/mock/home', (req, res) => {
     console.log('1');
-    read('./mock/movie.json', (data) => {
+    read('./mock/Movie.json', (data) => {
         res.end(JSON.stringify(data))
     })
 });

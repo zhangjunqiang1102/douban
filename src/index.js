@@ -6,7 +6,7 @@ import  {Provider} from 'react-redux'
 import   './common/reset.less'
 
 import store from './store'
-import Movie from "./containers/movie/Movie";
+import Movie from "./containers/Movie/Movie";
 import Home from "./containers/Home/Home";
 import Book from "./containers/Book/Book";
 import Group from "./containers/group/Group";

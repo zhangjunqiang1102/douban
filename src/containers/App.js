@@ -1,5 +1,5 @@
 import React from 'react'
-import Movie from "./movie/Movie";
+import Movie from "./Movie/Movie";
 
 export default class App extends React.Component {
     render() {

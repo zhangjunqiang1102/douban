@@ -19,11 +19,11 @@ export default class Movie extends React.Component {
                             <div className="item-rating">
                                 <div className="rank">
                                     <span className="rating-stars" data-rating="2.7">
-                                        <span className="rating-star rating-star-small-full"></span><span
-                                        className="rating-star rating-star-small-full"></span><span
-                                        className="rating-star rating-star-small-full"></span><span
-                                        className="rating-star rating-star-small-gray"></span><span
-                                        className="rating-star rating-star-small-gray"></span>
+                                        <span className="rating-star rating-star-small-full"></span>
+                                      <span className="rating-star rating-star-small-full"></span>
+                                      <span className="rating-star rating-star-small-full"></span>
+                                      <span className="rating-star rating-star-small-gray"></span>
+                                      <span className="rating-star rating-star-small-gray"></span>
                                     </span>
                                     <span>5.4</span>
                                 </div>
@@ -37,11 +37,11 @@ export default class Movie extends React.Component {
                             <div className="item-rating">
                                 <div className="rank">
                                 <span className="rating-stars" data-rating="2.7">
-                                    <span className="rating-star rating-star-small-full"></span><span
-                                    className="rating-star rating-star-small-full"></span><span
-                                    className="rating-star rating-star-small-full"></span><span
-                                    className="rating-star rating-star-small-gray"></span><span
-                                    className="rating-star rating-star-small-gray"></span>
+                                    <span className="rating-star rating-star-small-full"></span>
+                                  <span className="rating-star rating-star-small-full"></span>
+                                  <span className="rating-star rating-star-small-full"></span>
+                                  <span className="rating-star rating-star-small-gray"></span>
+                                  <span className="rating-star rating-star-small-gray"></span>
                                 </span>
                                     <span>5.4</span>
                                 </div>
@@ -55,11 +55,11 @@ export default class Movie extends React.Component {
                             <div className="item-rating">
                                 <div className="rank">
                                 <span className="rating-stars" data-rating="2.7">
-                                    <span className="rating-star rating-star-small-full"></span><span
-                                    className="rating-star rating-star-small-full"></span><span
-                                    className="rating-star rating-star-small-full"></span><span
-                                    className="rating-star rating-star-small-gray"></span><span
-                                    className="rating-star rating-star-small-gray"></span>
+                                    <span className="rating-star rating-star-small-full"></span>
+                                  <span className="rating-star rating-star-small-full"></span>
+                                  <span className="rating-star rating-star-small-full"></span>
+                                  <span className="rating-star rating-star-small-gray"></span>
+                                  <span className="rating-star rating-star-small-gray"></span>
                                 </span>
                                     <span>5.4</span>
                                 </div>
@@ -73,11 +73,11 @@ export default class Movie extends React.Component {
                             <div className="item-rating">
                                 <div className="rank">
                                 <span className="rating-stars" data-rating="2.7">
-                                    <span className="rating-star rating-star-small-full"></span><span
-                                    className="rating-star rating-star-small-full"></span><span
-                                    className="rating-star rating-star-small-full"></span><span
-                                    className="rating-star rating-star-small-gray"></span><span
-                                    className="rating-star rating-star-small-gray"></span>
+                                    <span className="rating-star rating-star-small-full"></span>
+                                  <span className="rating-star rating-star-small-full"></span>
+                                  <span className="rating-star rating-star-small-full"></span>
+                                  <span className="rating-star rating-star-small-gray"></span>
+                                  <span className="rating-star rating-star-small-gray"></span>
                                 </span>
                                     <span>5.4</span>
                                 </div>
