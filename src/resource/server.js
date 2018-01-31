@@ -16,7 +16,15 @@ app.use(function (req, res, next) {
     else next();
 });
 
-let home = require('./mock/home');
+let read = (p, fn) => {
+    fs.readFile(p, 'utf-8', (err, data) => {
+        if (err) {
+            fn({code: 0, err: 'file does not exist!'})
+        } else {
+            fn(JSON.parse(data))
+        }
+    })
+};
 
 app.get('/mock/home', (req, res) => {
     console.log('1');
@@ -34,7 +42,7 @@ app.get('/mock/book', (req, res) => {
 });
 let movie = require('./mock/movie');
 
-app.get('/mock/home', (req, res) => {
+app.get('/mock/movie', (req, res) => {
     console.log('1');
     read('./mock/movie.json', (data) => {
         res.end(JSON.stringify(data))
