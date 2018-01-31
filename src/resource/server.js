@@ -26,46 +26,49 @@ let read = (p, fn) => {
     })
 };
 
-app.get('/mock/home', (req, res) => {
-    console.log('1');
+
+app.get('/home', (req, res) => {
     read('./mock/home.json', (data) => {
         res.end(JSON.stringify(data))
     })
 });
 let book = require('./mock/book');
 
-app.get('/mock/book', (req, res) => {
+app.get('/book', (req, res) => {
     console.log('1');
     read('./mock/book.json', (data) => {
         res.end(JSON.stringify(data))
     })
 });
-let movie = require('./mock/movie');
 
-app.get('/mock/movie', (req, res) => {
+app.get('/movie', (req, res) => {
+
     console.log('1');
-    read('./mock/movie.json', (data) => {
+    read('./mock/Movie.json', (data) => {
         res.end(JSON.stringify(data))
     })
 });
 
 let radio = require('./mock/radio');
 
-app.get('/mock/radio', (req, res) => {
+app.get('/radio', (req, res) => {
 
-    read('./mock/radio.json', (data) => {
-        res.end(JSON.stringify(data))
+    read('/radio.json', (data) => {
+        res.end(JSON.stringify(data),)
     })
 });
 
 let group = require('./mock/group');
 
-app.get('/mock/group', (req, res) => {
 
-    read('./mock/group.json', (data) => {
+app.get('/mock/Group', (req, res) => {
+
+
+    read('./mock/Group.json', (data) => {
         res.end(JSON.stringify(data))
     })
 });
+
 
 
 

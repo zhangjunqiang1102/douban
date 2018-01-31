@@ -8,6 +8,7 @@ import List from "./List";
 
 @connect(state => ({...state.movie}), actions)
 export default class Movie extends React.Component {
+
     componentDidMount() {
 
         this.props.getMovieAPI()
@@ -27,6 +28,7 @@ export default class Movie extends React.Component {
                         <List data={item.moiveItems}/>
 
                     </section>
+
 
                 )
 
