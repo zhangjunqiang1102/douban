@@ -10,10 +10,15 @@ import Movie from "./containers/movie/Movie";
 import Home from "./containers/Home/Home";
 import Book from "./containers/Book/Book";
 import Group from "./containers/group/Group";
-import Search from './containers/Search/Search'
+import App from "./containers/App";
+
+
+import Search from './containers/Search/Search';
 import Radio from "./containers/Radio/Radio";
+
 ReactDOM.render(
     <Provider store={store}>
+        <App>
         <Router>
             <Switch>
                 <Route path="/" exact={true} component={Home}/>
@@ -24,5 +29,6 @@ ReactDOM.render(
                 <Route path='/search' component={Search}/>
             </Switch>
         </Router>
+        </App>
     </Provider>
-    , window.root)
+    , window.root);
