@@ -19,7 +19,7 @@ export default class Search extends React.Component {
             </a>
             <a href="#">
               <strong style={{color:"rgb(230, 70, 126)"}}>同城</strong>
-              <span>影院热映</span>
+              <span>周末活动</span>
             </a>
             <a href="/#">
               <strong style={{color:"rgb(159, 120, 96)"}}>阅读</strong>
@@ -47,7 +47,7 @@ export default class Search extends React.Component {
             </a>
             <a href="/status">
               <strong style={{color:"rgb(64, 207, 169)"}}>FM</strong>
-              <span>红星歌单</span>
+              <span>红心歌单</span>
             </a>
           </div>
         </li>
@@ -58,7 +58,7 @@ export default class Search extends React.Component {
               <span>畅销排行</span>
             </a>
             <a href="#">
-              <strong style={{color:"rrgb(244, 143, 46)"}}>音乐</strong>
+              <strong style={{color:"rgb(244, 143, 46)"}}>音乐</strong>
               <span>新碟榜</span>
             </a>
             <a href="/#">

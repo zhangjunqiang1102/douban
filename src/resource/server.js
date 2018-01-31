@@ -52,9 +52,9 @@ app.get('/mock/radio', (req, res) => {
 
 let group = require('./mock/group');
 
-app.get('/mock/group', (req, res) => {
+app.get('/mock/Group', (req, res) => {
 
-    read('./mock/group.json', (data) => {
+    read('./mock/Group.json', (data) => {
         res.end(JSON.stringify(data))
     })
 });

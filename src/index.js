@@ -9,7 +9,7 @@ import store from './store'
 import Movie from "./containers/Movie/Movie";
 import Home from "./containers/Home/Home";
 import Book from "./containers/Book/Book";
-import Group from "./containers/group/Group";
+import Group from "./containers/Group/Group";
 import App from "./containers/App";
 
 
