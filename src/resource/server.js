@@ -45,7 +45,7 @@ let movie = require('./mock/movie');
 
 app.get('/movie', (req, res) => {
     console.log('1');
-    read('./mock/movie.json', (data) => {
+    read('./mock/Movie.json', (data) => {
         res.end(JSON.stringify(data))
     })
 });
@@ -61,9 +61,11 @@ app.get('/radio', (req, res) => {
 
 let group = require('./mock/group');
 
-app.get('/group', (req, res) => {
 
-    read('./mock/group.json', (data) => {
+app.get('/mock/Group', (req, res) => {
+
+
+    read('./mock/Group.json', (data) => {
         res.end(JSON.stringify(data))
     })
 });
