@@ -9,12 +9,20 @@ import Movie from "./containers/movie/Movie";
 import Home from "./containers/Home/Home";
 import Book from "./containers/Book/Book";
 import Group from "./containers/group/Group";
+
 import App from './containers/App'
 import Radio from "./containers/Radio/Radio";
 import Search from "./containers/Search/Search";
 // import Nav from './components/Nav/Nav'
+
+import App from "./containers/App";
+
+
+import Search from './containers/Search/Search'
+
 ReactDOM.render(
     <Provider store={store}>
+        <App>
         <Router>
            <App>
             <Switch>
@@ -30,5 +38,6 @@ ReactDOM.render(
             </Switch>
            </App>
         </Router>
+        </App>
     </Provider>
-    , window.root)
+    , window.root);
