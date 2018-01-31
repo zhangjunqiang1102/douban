@@ -14,6 +14,7 @@ import App from "./containers/App";
 
 
 import Search from './containers/Search/Search'
+import Detail from "./containers/Detail/Detail";
 
 ReactDOM.render(
     <Provider store={store}>
@@ -23,6 +24,7 @@ ReactDOM.render(
                 <Route path="/" exact={true} component={Home}/>
                 <Route path='/movie' component={Movie}/>
                 <Route path='/book' component={Book}/>
+                <Route path="/detail" component={Detail}/>
                 <Route path='/group' component={Group}/>
                 <Route path='/search' component={Search}/>
             </Switch>
