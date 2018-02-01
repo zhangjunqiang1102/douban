@@ -23,7 +23,6 @@ export default class Nav extends  React.Component{
 
     </NavLink>
     <NavLink to={'/book'} >
-
         <span style={{color:"#9F7860"}}>图书</span>
     </NavLink>
             <NavLink to={'/movie'} >

@@ -1,134 +1,73 @@
 [
   {
-    "id": "1",
-    "title": "白天的房子",
-    "moiveItems": [
-      {
-        "conImg": "https://qnmob3.doubanio.com/lpic/s29597721.jpg?imageView2/0/q/80/w/9999/h/400/format/jpg)",
-        "itemName": "移动迷宫3：死亡解药",
-        "starts": "4",
-        "startsMins": "9.0"
-      }
-    ]
+    "id":"1",
+    "itemTitle":"豆瓣均分8，教你解决人与人之间无法彻底沟通带来的孤独感",
+    "itemImg":"https://qnmob3.doubanio.com/img/files/file-1517234285.jpeg?imageView2/2/q/80/w/330/h/330/format/jpg",
+    "itemDetail":"讲故事当然是有套路的，掌握这些套路，将会提升你的“故事力”。",
+    "itemSmall":"豆瓣时间"
   },
   {
-    "id": "2",
-    "title": "白天的房子",
-    "moiveItems": [
-      {
-        "conImg": "https://qnmob3.doubanio.com/lpic/s29597721.jpg?imageView2/0/q/80/w/9999/h/400/format/jpg)",
-        "itemName": "移动迷宫3：死亡解药",
-        "starts": "3",
-        "startsMins": "8.0"
-      }
-    ]
+    "id":"2",
+    "itemTitle":"豆瓣均分8，教你解决人与人之间无法彻底沟通带来的孤独感",
+    "itemImg":"https://qnmob3.doubanio.com/img/files/file-1517234285.jpeg?imageView2/2/q/80/w/330/h/330/format/jpg",
+    "itemDetail":"讲故事当然是有套路的，掌握这些套路，将会提升你的“故事力”。",
+    "itemSmall":"豆瓣时间"
   },
   {
-    "id": "1",
-    "title": "白天的房子",
-    "moiveItems": [
-      {
-        "conImg": "https://qnmob3.doubanio.com/lpic/s29597721.jpg?imageView2/0/q/80/w/9999/h/400/format/jpg)",
-        "itemName": "移动迷宫3：死亡解药",
-        "starts": "4",
-        "startsMins": "9.0"
-      }
-    ]
+    "id":"3",
+    "itemTitle":"豆瓣均分8，教你解决人与人之间无法彻底沟通带来的孤独感",
+    "itemImg":"https://qnmob3.doubanio.com/img/files/file-1517234285.jpeg?imageView2/2/q/80/w/330/h/330/format/jpg",
+    "itemDetail":"讲故事当然是有套路的，掌握这些套路，将会提升你的“故事力”。",
+    "itemSmall":"豆瓣时间"
   },
   {
-    "id": "3",
-    "title": "白天的房子",
-    "moiveItems": [
-      {
-        "conImg": "https://qnmob3.doubanio.com/lpic/s29597721.jpg?imageView2/0/q/80/w/9999/h/400/format/jpg)",
-        "itemName": "移动迷宫3：死亡解药",
-        "starts": "3",
-        "startsMins": "8.0"
-      }
-    ]
+    "id":"4",
+    "itemTitle":"豆瓣均分8，教你解决人与人之间无法彻底沟通带来的孤独感",
+    "itemImg":"https://qnmob3.doubanio.com/img/files/file-1517234285.jpeg?imageView2/2/q/80/w/330/h/330/format/jpg",
+    "itemDetail":"讲故事当然是有套路的，掌握这些套路，将会提升你的“故事力”。",
+    "itemSmall":"豆瓣时间"
   },
   {
-    "id": "4",
-    "title": "白天的房子",
-    "moiveItems": [
-      {
-        "conImg": "https://qnmob3.doubanio.com/lpic/s29597721.jpg?imageView2/0/q/80/w/9999/h/400/format/jpg)",
-        "itemName": "移动迷宫3：死亡解药",
-        "starts": "5",
-        "startsMins": "7.0"
-      }
-    ]
+    "id":"5",
+    "itemTitle":"豆瓣均分8，教你解决人与人之间无法彻底沟通带来的孤独感",
+    "itemImg":"https://qnmob3.doubanio.com/img/files/file-1517234285.jpeg?imageView2/2/q/80/w/330/h/330/format/jpg",
+    "itemDetail":"讲故事当然是有套路的，掌握这些套路，将会提升你的“故事力”。",
+    "itemSmall":"豆瓣时间"
   },
   {
-    "id": "5",
-    "title": "白天的房子",
-    "moiveItems": [
-      {
-        "conImg": "https://qnmob3.doubanio.com/lpic/s29597721.jpg?imageView2/0/q/80/w/9999/h/400/format/jpg)",
-        "itemName": "移动迷宫3：死亡解药",
-        "starts": "3",
-        "startsMins": "9.4"
-      }
-    ]
+    "id":"6",
+    "itemTitle":"豆瓣均分8，教你解决人与人之间无法彻底沟通带来的孤独感",
+    "itemImg":"https://qnmob3.doubanio.com/img/files/file-1517234285.jpeg?imageView2/2/q/80/w/330/h/330/format/jpg",
+    "itemDetail":"讲故事当然是有套路的，掌握这些套路，将会提升你的“故事力”。",
+    "itemSmall":"豆瓣时间"
   },
   {
-    "id": "6",
-    "title": "白天的房子",
-    "moiveItems": [
-      {
-        "conImg": "https://qnmob3.doubanio.com/lpic/s29597721.jpg?imageView2/0/q/80/w/9999/h/400/format/jpg)",
-        "itemName": "移动迷宫3：死亡解药",
-        "starts": "5",
-        "startsMins": "9.6"
-      }
-    ]
+    "id":"7",
+    "itemTitle":"豆瓣均分8，教你解决人与人之间无法彻底沟通带来的孤独感",
+    "itemImg":"https://qnmob3.doubanio.com/img/files/file-1517234285.jpeg?imageView2/2/q/80/w/330/h/330/format/jpg",
+    "itemDetail":"讲故事当然是有套路的，掌握这些套路，将会提升你的“故事力”。",
+    "itemSmall":"豆瓣时间"
   },
   {
-    "id": "7",
-    "title": "白天的房子",
-    "moiveItems": [
-      {
-        "conImg": "https://qnmob3.doubanio.com/lpic/s29597721.jpg?imageView2/0/q/80/w/9999/h/400/format/jpg)",
-        "itemName": "移动迷宫3：死亡解药",
-        "starts": "3",
-        "startsMins": "7.0"
-      }
-    ]
+    "id":"8",
+    "itemTitle":"豆瓣均分8，教你解决人与人之间无法彻底沟通带来的孤独感",
+    "itemImg":"https://qnmob3.doubanio.com/img/files/file-1517234285.jpeg?imageView2/2/q/80/w/330/h/330/format/jpg",
+    "itemDetail":"讲故事当然是有套路的，掌握这些套路，将会提升你的“故事力”。",
+    "itemSmall":"豆瓣时间"
   },
   {
-    "id": "8",
-    "title": "白天的房子",
-    "moiveItems": [
-      {
-        "conImg": "https://qnmob3.doubanio.com/lpic/s29597721.jpg?imageView2/0/q/80/w/9999/h/400/format/jpg)",
-        "itemName": "移动迷宫3：死亡解药",
-        "starts": "2",
-        "startsMins": "8.2"
-      }
-    ]
+    "id":"9",
+    "itemTitle":"豆瓣均分8，教你解决人与人之间无法彻底沟通带来的孤独感",
+    "itemImg":"https://qnmob3.doubanio.com/img/files/file-1517234285.jpeg?imageView2/2/q/80/w/330/h/330/format/jpg",
+    "itemDetail":"讲故事当然是有套路的，掌握这些套路，将会提升你的“故事力”。",
+    "itemSmall":"豆瓣时间"
   },
   {
-    "id": "9",
-    "title": "白天的房子",
-    "moiveItems": [
-      {
-        "conImg": "https://qnmob3.doubanio.com/lpic/s29597721.jpg?imageView2/0/q/80/w/9999/h/400/format/jpg)",
-        "itemName": "移动迷宫3：死亡解药",
-        "starts": "5",
-        "startsMins": "9.4"
-      }
-    ]
-  },
-  {
-    "id": "10",
-    "title": "白天的房子",
-    "moiveItems": [
-      {
-        "conImg": "https://qnmob3.doubanio.com/lpic/s29597721.jpg?imageView2/0/q/80/w/9999/h/400/format/jpg)",
-        "itemName": "移动迷宫3：死亡解药",
-        "starts": "4",
-        "startsMins": "9.9"
-      }
-    ]
+    "id":"10",
+    "itemTitle":"豆瓣均分8，教你解决人与人之间无法彻底沟通带来的孤独感",
+    "itemImg":"https://qnmob3.doubanio.com/img/files/file-1517234285.jpeg?imageView2/2/q/80/w/330/h/330/format/jpg",
+    "itemDetail":"讲故事当然是有套路的，掌握这些套路，将会提升你的“故事力”。",
+    "itemSmall":"豆瓣时间"
   }
 ]
+
