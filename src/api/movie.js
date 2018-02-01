@@ -4,10 +4,10 @@ import axios from "./index";
 
 export function getMovie(){
 
-    return axios.get('/movie')
+  return axios.get('/movie')
 }
 
 // 获取某一部电影
 export function getMovieDetail(id) {
-    return axios.get(`/movie/${id}`);
+  return axios.get(`/movie/${id}`);
 }

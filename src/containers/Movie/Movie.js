@@ -16,7 +16,7 @@ export default class Movie extends React.Component {
     }
 
     render() {
-        console.log(this.props.hot);
+        // console.log(this.props.hot);
 
         return <div>
             {this.props.hot.map((item, index) => {

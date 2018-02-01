@@ -28,7 +28,7 @@ let read = (p, fn) => {
 
 
 let home = require('./mock/home');
-app.get('/mock/home', (req, res) => {
+app.get('/home', (req, res) => {
     read('./mock/home.json', (data) => {
         res.end(JSON.stringify(data))
     })
@@ -54,12 +54,13 @@ app.get('/book/:id', (req, res) => {
     })
 });
 
-app.get('/movie', (req, res) => {
 
+app.get('/movie', (req, res) => {
     read('./mock/movie.json', (data) => {
         res.end(JSON.stringify(data))
     })
 });
+
 app.get('/movie/:id', (req, res) => {
 
     let {id} = req.params;
@@ -74,15 +75,15 @@ app.get('/movie/:id', (req, res) => {
     })
 });
 
+
 let radio = require('./mock/radio');
-app.get('/mock/radio', (req, res) => {
+app.get('/radio', (req, res) => {
     read('./mock/radio.json', (data) => {
         res.end(JSON.stringify(data),)
     })
 });
-
 let group = require('./mock/group');
-app.get('/mock/group', (req, res) => {
+app.get('/group', (req, res) => {
     read('./mock/group.json', (data) => {
         res.end(JSON.stringify(data))
     })
@@ -121,5 +122,3 @@ app.get('/validate',function (req,res) {
     // 用于校验用户是否登录
     res.json({user:req.session.user,msg:'',err:0,success:''});
 });
-
-
