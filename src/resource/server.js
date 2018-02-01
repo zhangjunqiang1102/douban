@@ -25,76 +25,47 @@ let read = (p, fn) => {
         }
     })
 };
-<<<<<<< HEAD
+
 
 let home = require('./mock/home');
-
-=======
-
-
->>>>>>> bae55cbef888471c125846f4a050760dcbbdad6e
 app.get('/home', (req, res) => {
     read('./mock/home.json', (data) => {
         res.end(JSON.stringify(data))
     })
 });
-let book = require('./mock/book');
 
+
+let book = require('./mock/book');
 app.get('/book', (req, res) => {
-<<<<<<< HEAD
-    console.log('1');
-    read('./book.json', (data) => {
-=======
     read('./mock/book.json', (data) => {
->>>>>>> 58bdde7bcda6384ae63842a50876094186118116
+
         res.end(JSON.stringify(data))
     })
 });
-<<<<<<< HEAD
+
+
 let movie = require('./mock/home');
-
-app.get('/home', (req, res) => {
-=======
-
 app.get('/movie', (req, res) => {
-<<<<<<< HEAD
     read('./mock/movie.json', (data) => {
-=======
-
->>>>>>> bae55cbef888471c125846f4a050760dcbbdad6e
-    console.log('1');
-    read('./mock/Movie.json', (data) => {
->>>>>>> bae55cbef888471c125846f4a050760dcbbdad6e
         res.end(JSON.stringify(data))
     })
 });
 
 let radio = require('./mock/radio');
-
 app.get('/radio', (req, res) => {
-
-    read('/radio.json', (data) => {
+    read('./mock/radio.json', (data) => {
         res.end(JSON.stringify(data),)
     })
 });
 
+
 let group = require('./mock/group');
-
-<<<<<<< HEAD
 app.get('/group', (req, res) => {
-    console.log(1);
-    read('/group.json', (data) => {
-        res.end(JSON.stringify(data))
-    })
-});
-=======
-
-app.get('/mock/group', (req, res) => {
-
     read('./mock/group.json', (data) => {
         res.end(JSON.stringify(data))
     })
 });
+
 
 
 
@@ -131,7 +102,3 @@ app.get('/validate',function (req,res) {
 });
 
 
-
-
-
->>>>>>> bae55cbef888471c125846f4a050760dcbbdad6e

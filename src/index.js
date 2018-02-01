@@ -18,6 +18,7 @@ import Search from './containers/Search/Search'
 import Detail from "./containers/Detail/Detail";
 
 import Radio from "./containers/Radio/Radio";
+import RadioDetail from "./containers/Radio/Detail";
 
 
 ReactDOM.render(
@@ -32,6 +33,7 @@ ReactDOM.render(
                 <Route path="/detail" component={Detail}/>
                 <Route path='/group' component={Group}/>
                 <Route path='/radio' component={Radio}/>
+                <Route path='/count/detail/:id' component={RadioDetail}/>
                 <Route path='/search' component={Search}/>
             </Switch>
             </App>

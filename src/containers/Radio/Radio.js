@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './index.less';
 import Nav from "../../components/Nav/Nav";
 import FootLogo from "../../components/FooterLogo/FootLogo";
@@ -61,7 +62,7 @@ export default class Radio extends React.Component {
                 {this.props.radio.map((item, index) => {
                     let list = item.status;
 
-                    return list.is_status_ad ? <li key={index}>
+                    return list.is_status_ad ? <li key={index} className="radio-lis">
                         <div className="radio-btn-dou">
                             <a href="https://m.douban.com/people/95805238/">
                                 <img src="https://img3.doubanio.com/icon/up95805238-16.jpg" alt=""/>
@@ -78,11 +79,9 @@ export default class Radio extends React.Component {
 
                         <div className="radio-content">
                             <div className="radio-title">
-                                <a href="https://m.douban.com/hashtag/%E8%B1%86%E7%93%A32017%E5%B9%B4%E5%BA%A6%E7%94%B5%E5%BD%B1%E6%A6%9C%E5%8D%95">
-                                    #豆瓣2017年度电影榜单#
-                                </a>
-                                你的专业补片指南
-                                <a href="https://movie.douban.com/annual/2017?source=dbbroadcast">https://douc.cc/3fg15n</a>
+                                <a href={list.entities.length===2?list.entities[0].uri:null}>{list.entities.length===2?"#"+list.entities[0].title+"#":null}</a>
+                                {list.text}
+                                <a href={list.entities.length===2?list.entities[1].uri:list.entities[0].uri}> {list.entities.length===2?list.entities[1].title:list.entities[0].title}</a>
                             </div>
                             <div className="radio-cover">
                                 <img src={list.images[0].normal.url || list.image[0].normal.url} alt=""/>
@@ -90,14 +89,14 @@ export default class Radio extends React.Component {
                             <div className="radio-info clearfix">
                                 <div className="iconfont icon-dianzan dialog"> <span
                                     className="dialog">{list.like_count}</span></div>
-                                <div className="iconfont icon-pinglun"> <span>{list.comments_count}</span></div>
+                                <Link to={"/count/detail/"+list.id} className="iconfont icon-pinglun"> <span>{list.comments_count}</span></Link>
                                 <div className="iconfont icon-shuaxin dialog"> <span
                                     className="dialog">{list.reshares_count}</span></div>
                                 <div className="iconfont icon-more" onClick={(e)=>{this.wrapShow(e)}}></div>
                             </div>
                         </div>
 
-                    </li> : <li key={index}>
+                    </li> : <li key={index} className="radio-lis">
                         <div className="radio-btn-dou">
                             <a href="https://m.douban.com/people/95805238/">
                                 <img src="https://img3.doubanio.com/icon/up95805238-16.jpg" alt=""/>
@@ -115,7 +114,7 @@ export default class Radio extends React.Component {
                         <div className="radio-diary">
                             <a href="https://www.douban.com/note/650948544/">
                                 <div className="radio-diary-title">
-                                    豆瓣·电影日历 widget 添加教程
+                                    {list.card?list.card.title:"受苹果公司应用内支付新规的影响"}
                                 </div>
                                 <div
                                     className={list.card && list.card.image ? "radio-diary-detail has-cover" : "radio-diary-detail"}>
@@ -133,7 +132,7 @@ export default class Radio extends React.Component {
                             <div className="radio-info clearfix">
                                 <div className="iconfont icon-dianzan dialog"> <span
                                     className="dialog">{list.like_count}</span></div>
-                                <div className="iconfont icon-pinglun"> <span>{list.comments_count}</span></div>
+                                <Link to={"/count/detail/"+list.id} className="iconfont icon-pinglun"> <span>{list.comments_count}</span></Link>
                                 <div className="iconfont icon-shuaxin dialog"> <span
                                     className="dialog">{list.reshares_count}</span></div>
                                 <div className="iconfont icon-more" onClick={(e)=>{this.wrapShow(e)}}></div>
