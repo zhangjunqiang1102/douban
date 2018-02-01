@@ -1,10 +1,33 @@
 import React from 'react'
 import './index.less'
+import Home from '../../containers/home/Home'
+import {getHome} from '../../api/home';
+import 'babel-polyfill';
 
 export default class Book extends React.Component {
-  render() {
-    return <div className="both">
 
+  constructor(){
+    super();
+    this.state = {movie:{}}
+  }
+
+
+
+  async componentWillMount(){
+    let movie = this.props.location.state;
+    if(!movie){
+      movie = await getHome(this.props.match.params.movieId);
+    }
+    this.setState({movie});
+  }
+
+  render() {
+
+
+
+
+    return <div className="both">
+<Home/>
       <div className="title">
         <h1>移动迷宫3：死亡解药</h1>
         <div className="title_con clearfix">

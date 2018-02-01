@@ -1,6 +1,6 @@
 import axios from "./index";
 
-//获取电影数据
+//获取小组数据
 export function getGroup(){
     return axios.get('/mock/group')
 }

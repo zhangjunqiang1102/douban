@@ -3,8 +3,8 @@ let app = express();
 let fs = require('fs');
 let session = require('express-session');
 app.listen(3000);
-// let bodyParser = require('body-parser');
-// app.use(bodyParser.json());//
+let bodyParser = require('body-parser');
+app.use(bodyParser.json());//
 
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "http://localhost:9000");
@@ -34,17 +34,14 @@ app.get('/home', (req, res) => {
     })
 });
 
-
 let book = require('./mock/book');
 app.get('/book', (req, res) => {
     read('./mock/book.json', (data) => {
-
         res.end(JSON.stringify(data))
     })
 });
 
-
-let movie = require('./mock/home');
+let movie = require('./mock/movie');
 app.get('/movie', (req, res) => {
     read('./mock/movie.json', (data) => {
         res.end(JSON.stringify(data))
@@ -57,15 +54,12 @@ app.get('/radio', (req, res) => {
         res.end(JSON.stringify(data),)
     })
 });
-
-
 let group = require('./mock/group');
 app.get('/group', (req, res) => {
     read('./mock/group.json', (data) => {
         res.end(JSON.stringify(data))
     })
 });
-
 
 
 
@@ -100,5 +94,3 @@ app.get('/validate',function (req,res) {
     // 用于校验用户是否登录
     res.json({user:req.session.user,msg:'',err:0,success:''});
 });
-
-
