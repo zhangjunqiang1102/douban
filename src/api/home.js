@@ -8,10 +8,7 @@ export let getHome=()=>{
     return axios.get('/home')
 };
 
-//
-// export function getHome(id){
-//     return axios.get(`/home${id}`)
-// }
+
 
 
 
