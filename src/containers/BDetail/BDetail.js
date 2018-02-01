@@ -1,16 +1,33 @@
 import React from 'react'
 import './index.less'
+import {getHome} from '../../api/home';
+import 'babel-polyfill';
+
+
 
 export default class Book extends React.Component {
+  constructor(){
+    super();
+    this.state = {book:{}}
+  }
+  async componentWillMount(){
+    let book = this.props.location.state;
+    console.log(book);
+    if(!book){
+      book = await getHome(this.props.match.params.bookId);
+    }
+    this.setState({book});
+  }
+
   render() {
     return <div className="both">
 
       <div className="title">
-        <h1>移动迷宫3：死亡解药</h1>
+        <h1>{this.state.book.itemName}</h1>
         <div className="title_con clearfix">
           <div className="right ">
             <a href="#">
-              <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2508618114.webp" alt=""/>
+              <img src={this.state.book.conImg} alt=""/>
             </a>
           </div>
           <div className="left">
@@ -19,14 +36,12 @@ export default class Book extends React.Component {
                 <span className="rating-star rating-star-medium-full"> </span>
 
               </span>
-              <strong>8.0</strong>
-              <span>123人评价</span>
+              <strong>{this.state.book.starts}</strong>
+              <span>{this.state.book.people}</span>
             </p>
             <p className="meta">
 
-
-              142分钟 / 动作 / 科幻 / 冒险 / 韦斯·鲍尔(导演) / 迪伦·奥布莱恩 / 卡雅·斯考达里奥 / 李起弘 / 2018-01-26(中国大陆) 上映
-
+              {this.state.book.notes}
 
             </p>
           </div>

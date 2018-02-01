@@ -1,6 +1,5 @@
 import React from 'react'
 import './index.less'
-import Home from '../../containers/home/Home'
 import {getHome} from '../../api/home';
 import 'babel-polyfill';
 
