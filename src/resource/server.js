@@ -3,8 +3,8 @@ let app = express();
 let fs = require('fs');
 let session = require('express-session');
 app.listen(3000);
-// let bodyParser = require('body-parser');
-// app.use(bodyParser.json());//
+let bodyParser = require('body-parser');
+app.use(bodyParser.json());//
 
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "http://localhost:9000");
@@ -27,23 +27,23 @@ let read = (p, fn) => {
 };
 
 
-app.get('/home', (req, res) => {
+let home = require('./mock/home');
+app.get('/mock/home', (req, res) => {
     read('./mock/home.json', (data) => {
         res.end(JSON.stringify(data))
     })
 });
-let book = require('./mock/book');
 
-app.get('/book', (req, res) => {
-    console.log('1');
+let book = require('./mock/book');
+app.get('/mock/book', (req, res) => {
     read('./mock/book.json', (data) => {
         res.end(JSON.stringify(data))
     })
 });
 
+
 app.get('/movie', (req, res) => {
 
-    console.log('1');
     read('./mock/movie.json', (data) => {
         res.end(JSON.stringify(data))
     })
@@ -64,21 +64,15 @@ app.get('/movie/:id', (req, res) => {
 });
 
 let radio = require('./mock/radio');
-
-app.get('/radio', (req, res) => {
-
-    read('/radio.json', (data) => {
+app.get('/mock/radio', (req, res) => {
+    read('./mock/radio.json', (data) => {
         res.end(JSON.stringify(data),)
     })
 });
 
 let group = require('./mock/group');
-
-
-app.get('/mock/Group', (req, res) => {
-
-
-    read('./mock/Group.json', (data) => {
+app.get('/mock/group', (req, res) => {
+    read('./mock/group.json', (data) => {
         res.end(JSON.stringify(data))
     })
 });
@@ -116,8 +110,5 @@ app.get('/validate',function (req,res) {
     // 用于校验用户是否登录
     res.json({user:req.session.user,msg:'',err:0,success:''});
 });
-
-
-
 
 
