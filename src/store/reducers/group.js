@@ -9,7 +9,7 @@ function group(state = initState, action) {
         case Types.SELECT_GROUP:
             return {...state, group: action.payload}
     }
-    return state
+    return state;
 }
 
 export default group
