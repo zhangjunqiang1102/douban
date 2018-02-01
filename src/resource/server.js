@@ -26,7 +26,6 @@ let read = (p, fn) => {
     })
 };
 
-let home = require('./mock/home');
 
 app.get('/home', (req, res) => {
     read('./mock/home.json', (data) => {
@@ -40,10 +39,15 @@ app.get('/book', (req, res) => {
         res.end(JSON.stringify(data))
     })
 });
-let movie = require('./mock/movie');
 
 app.get('/movie', (req, res) => {
+<<<<<<< HEAD
     read('./mock/movie.json', (data) => {
+=======
+
+    console.log('1');
+    read('./mock/Movie.json', (data) => {
+>>>>>>> bae55cbef888471c125846f4a050760dcbbdad6e
         res.end(JSON.stringify(data))
     })
 });
