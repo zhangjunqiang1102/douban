@@ -11,13 +11,11 @@ import Home from "./containers/Home/Home";
 import Book from "./containers/Book/Book";
 import Group from "./containers/Group/Group";
 import App from "./containers/App";
-
-
-
 import Search from './containers/Search/Search'
 import Detail from "./containers/Detail/Detail";
-
 import Radio from "./containers/Radio/Radio";
+import Profile from "./containers/Search/Profile/Profile";
+import Login from "./containers/Search/Login/Login";
 
 
 ReactDOM.render(
@@ -32,6 +30,8 @@ ReactDOM.render(
                 <Route path='/group' component={Group}/>
                 <Route path='/radio' component={Radio}/>
                 <Route path='/search' component={Search}/>
+                <Route path="/profile" component={Profile}/>
+                <Route path="/login" component={Login}/>
             </Switch>
         </Router>
         </App>

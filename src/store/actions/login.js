@@ -23,7 +23,7 @@ let actions = {
                 dispatch({type:Types.SET_USER_INFO,user:data});
                 if(data.err===0){
                     setTimeout(()=>{
-                        history.push('/profile'); // 成功跳转到个人中心页面
+                        history.push('/Profile'); // 成功跳转到个人中心页面
                     },1000)
                 }
             })
