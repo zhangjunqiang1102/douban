@@ -27,6 +27,10 @@ let read = (p, fn) => {
 };
 
 
+let home = require('./mock/home');
+
+
+
 app.get('/home', (req, res) => {
     read('./mock/home.json', (data) => {
         res.end(JSON.stringify(data))
@@ -35,10 +39,13 @@ app.get('/home', (req, res) => {
 let book = require('./mock/book');
 
 app.get('/book', (req, res) => {
+
     read('./mock/book.json', (data) => {
+
         res.end(JSON.stringify(data))
     })
 });
+
 
 app.get('/movie', (req, res) => {
 
@@ -61,7 +68,6 @@ let group = require('./mock/group');
 
 
 app.get('/mock/group', (req, res) => {
-
     read('./mock/group.json', (data) => {
         res.end(JSON.stringify(data))
     })
@@ -100,8 +106,5 @@ app.get('/validate',function (req,res) {
     // 用于校验用户是否登录
     res.json({user:req.session.user,msg:'',err:0,success:''});
 });
-
-
-
 
 
