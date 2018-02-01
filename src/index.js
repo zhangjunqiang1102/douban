@@ -22,8 +22,9 @@ import Radio from "./containers/Radio/Radio";
 
 ReactDOM.render(
     <Provider store={store}>
-        <App>
+
         <Router>
+            <App>
             <Switch>
                 <Route path="/" exact={true} component={Home}/>
                 <Route path='/movie' component={Movie}/>
@@ -33,7 +34,8 @@ ReactDOM.render(
                 <Route path='/radio' component={Radio}/>
                 <Route path='/search' component={Search}/>
             </Switch>
+            </App>
         </Router>
-        </App>
+
     </Provider>
     , window.root);

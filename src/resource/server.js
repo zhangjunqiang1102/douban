@@ -36,7 +36,6 @@ app.get('/home', (req, res) => {
 let book = require('./mock/book');
 
 app.get('/book', (req, res) => {
-    console.log('1');
     read('./mock/book.json', (data) => {
         res.end(JSON.stringify(data))
     })
@@ -44,8 +43,7 @@ app.get('/book', (req, res) => {
 let movie = require('./mock/movie');
 
 app.get('/movie', (req, res) => {
-    console.log('1');
-    read('./mock/Movie.json', (data) => {
+    read('./mock/movie.json', (data) => {
         res.end(JSON.stringify(data))
     })
 });
@@ -62,10 +60,9 @@ app.get('/radio', (req, res) => {
 let group = require('./mock/group');
 
 
-app.get('/mock/Group', (req, res) => {
+app.get('/mock/group', (req, res) => {
 
-
-    read('./mock/Group.json', (data) => {
+    read('./mock/group.json', (data) => {
         res.end(JSON.stringify(data))
     })
 });
