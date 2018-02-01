@@ -82,7 +82,7 @@ app.get('/movie/:id', (req, res) => {
 let radio = require('./mock/radio');
 app.get('/radio', (req, res) => {
     read('./mock/radio.json', (data) => {
-        res.end(JSON.stringify(data),)
+        setTimeout(()=>{res.end(JSON.stringify(data))},1500);
     })
 });
 
