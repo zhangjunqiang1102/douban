@@ -25,9 +25,14 @@ let read = (p, fn) => {
         }
     })
 };
+<<<<<<< HEAD
 
 let home = require('./mock/home');
 
+=======
+
+
+>>>>>>> bae55cbef888471c125846f4a050760dcbbdad6e
 app.get('/home', (req, res) => {
     read('./mock/home.json', (data) => {
         res.end(JSON.stringify(data))
@@ -41,11 +46,17 @@ app.get('/book', (req, res) => {
         res.end(JSON.stringify(data))
     })
 });
+<<<<<<< HEAD
 let movie = require('./mock/home');
 
 app.get('/home', (req, res) => {
+=======
+
+app.get('/movie', (req, res) => {
+
+>>>>>>> bae55cbef888471c125846f4a050760dcbbdad6e
     console.log('1');
-    read('./mock/movie.json', (data) => {
+    read('./mock/Movie.json', (data) => {
         res.end(JSON.stringify(data))
     })
 });
@@ -54,16 +65,66 @@ let radio = require('./mock/radio');
 
 app.get('/radio', (req, res) => {
 
-    read('./mock/radio.json', (data) => {
-        res.end(JSON.stringify(data))
+    read('/radio.json', (data) => {
+        res.end(JSON.stringify(data),)
     })
 });
 
 let group = require('./mock/group');
 
+<<<<<<< HEAD
 app.get('/group', (req, res) => {
     console.log(1);
     read('/group.json', (data) => {
         res.end(JSON.stringify(data))
     })
 });
+=======
+
+app.get('/mock/Group', (req, res) => {
+
+
+    read('./mock/Group.json', (data) => {
+        res.end(JSON.stringify(data))
+    })
+});
+
+
+
+
+let userList = []; // 用户信息
+let crypto = require('crypto');
+// 先注册在登录 {user:null,msg:'账号重复',success:'成功后的提示',err:0}
+app.post('/reg',function (req,res) { // {username:'123',password:'456'}
+    let {username,password} = req.body;
+    let user = userList.find(item=>item.username==username);
+    if(user){
+        res.json({user:null,msg:'用户已存在!!',success:'',err:1});
+    }else{
+        // 摘要算法 md5： 不可逆  加密后的长度全部一样 如果有一点不一样加密出的结果也不一样
+        password = crypto.createHash('md5').update(password).digest('base64');
+        userList.push({username,password});
+        res.json({user:null,msg:'',success:'恭喜你注册成功',err:0});
+    }
+});
+app.post('/login',function (req,res) { // {username,123456}
+    let {username,password} = req.body;
+    password = crypto.createHash('md5').update(password).digest('base64');
+    let user = userList.find(item=>(item.username===username)&&(item.password===password));
+    if(user){ // 有这个用户
+        req.session.user = username; //相当于登录成功后将用户名保存在session中了
+        res.json({user:username,msg:'',success:'恭喜登录成功',err:0});
+    }else{ // 用户不存在
+        res.json({user:null,msg:'用户名或密码不正确',success:'',err:1});
+    }
+});
+app.get('/validate',function (req,res) {
+    // 用于校验用户是否登录
+    res.json({user:req.session.user,msg:'',err:0,success:''});
+});
+
+
+
+
+
+>>>>>>> bae55cbef888471c125846f4a050760dcbbdad6e
