@@ -44,9 +44,23 @@ app.get('/book', (req, res) => {
 app.get('/movie', (req, res) => {
 
     console.log('1');
-    read('./mock/Movie.json', (data) => {
+    read('./mock/movie.json', (data) => {
         res.end(JSON.stringify(data))
     })
+});
+app.get('/movie/:id', (req, res) => {
+
+    let {id} = req.params;
+    read('./mock/movie.json', (data) => {
+
+        data.forEach(item =>{
+           let itemdata= item.moiveItems.find(item=>item.movieId === id) || {};
+            if (JSON.stringify(itemdata)!=="{}"){
+                res.end(JSON.stringify(itemdata))
+            }
+        })
+    })
+
 });
 
 let radio = require('./mock/radio');
