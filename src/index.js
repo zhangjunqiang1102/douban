@@ -26,12 +26,13 @@ ReactDOM.render(
                 <Switch>
                     <Route path="/" exact={true} component={Home}/>
                     <Route path="/home" component={Home}/>
-                    <Route path='/movie' component={Movie}/>
+
                     <Route path='/book' component={Book}/>
                     <Route path='/group' component={Group}/>
                     <Route path='/search' component={Search}/>
                     <Route path='/movie' exact={true} component={Movie}/>
                     <Route path="/movie/detail/:id" component={MDetail}/>
+
                     <Route path='/book' exact={true} component={Book}/>
                     <Route path='/book/detail/:id' component={BDetail}/>
                     <Route path='/radio' component={Radio}/>

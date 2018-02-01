@@ -1,6 +1,5 @@
 import React from 'react'
 import './index.less'
-import Home from '../../containers/home/Home'
 import {getHome} from '../../api/home';
 import 'babel-polyfill';
 
@@ -47,10 +46,10 @@ export default class Book extends React.Component {
         </div>
         <div className="subject_mark clearfix">
           <div className="mark_item ">
-            <a href="javascript:;" className="item_left">
+            <a href="javascript:;" className="item_left1">
               <span>想看</span>
             </a>
-            <a href="javascript:;" className="item_right">
+            <a href="javascript:;" className="item_right1">
               <span>看过</span>
             </a>
           </div>
@@ -59,7 +58,7 @@ export default class Book extends React.Component {
           <h2>移动迷宫3：死亡解药的剧情简介</h2>
           <div className="bd">
             <p>{this.state.movie.story}<a className="expand"
-                                                                                       href="javascript:;">(展开)</a></p>
+                                          href="javascript:;">(展开)</a></p>
           </div>
         </div>
         <div className="tags">
