@@ -6,6 +6,7 @@ import actions from '../../store/actions/movie'
 import List from "./List";
 
 
+
 @connect(state => ({...state.movie}), actions)
 export default class Movie extends React.Component {
 
