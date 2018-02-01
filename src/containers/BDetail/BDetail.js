@@ -60,13 +60,13 @@ export default class Book extends React.Component {
         <div className="subject_mark clearfix">
           <div className="mark_item ">
             <a href="javascript:;" className="item_left">
-              <span>想看</span>
+              <span>想读</span>
             </a>
             <a href="javascript:;" className="item_center">
-              <span>想看</span>
+              <span>在读</span>
             </a>
             <a href="javascript:;" className="item_right">
-              <span>看过</span>
+              <span>读过</span>
             </a>
           </div>
         </div>

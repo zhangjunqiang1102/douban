@@ -58,7 +58,7 @@ export default class Book extends React.Component {
           <h2>移动迷宫3：死亡解药的剧情简介</h2>
           <div className="bd">
             <p>{this.state.movie.story}<a className="expand"
-                                                                                       href="javascript:;">(展开)</a></p>
+                                          href="javascript:;">(展开)</a></p>
           </div>
         </div>
         <div className="tags">
