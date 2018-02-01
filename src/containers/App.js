@@ -1,5 +1,4 @@
 import React from 'react'
-import Movie from "./Movie/Movie";
 import Nav from "../components/Nav/Nav";
 
 
@@ -8,8 +7,6 @@ export default class App extends React.Component {
         return <div>
             <Nav/>
             {this.props.children}
-
-
         </div>
     }
 }

@@ -1,20 +1,17 @@
 import React from 'react'
 import './index.less'
-import Home from '../../containers/home/Home'
 import {getHome} from '../../api/home';
 import 'babel-polyfill';
 
-export default class Book extends React.Component {
 
+export default class Book extends React.Component {
   constructor(){
     super();
     this.state = {movie:{}}
   }
-
-
-
   async componentWillMount(){
     let movie = this.props.location.state;
+    console.log(movie);
     if(!movie){
       movie = await getHome(this.props.match.params.movieId);
     }
@@ -22,18 +19,14 @@ export default class Book extends React.Component {
   }
 
   render() {
-
-
-
-
     return <div className="both">
-<Home/>
+
       <div className="title">
-        <h1>移动迷宫3：死亡解药</h1>
+        <h1>{this.state.movie.itemName}</h1>
         <div className="title_con clearfix">
           <div className="right ">
             <a href="#">
-              <img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2508618114.webp" alt=""/>
+              <img src={this.state.movie.conImg} alt=""/>
             </a>
           </div>
           <div className="left">
@@ -42,25 +35,21 @@ export default class Book extends React.Component {
                 <span className="rating-star rating-star-medium-full"> </span>
 
               </span>
-              <strong>8.0</strong>
-              <span>123人评价</span>
+              <strong>{this.state.movie.starts}</strong>
+              <span>{this.state.movie.people}</span>
             </p>
             <p className="meta">
-
-
-              142分钟 / 动作 / 科幻 / 冒险 / 韦斯·鲍尔(导演) / 迪伦·奥布莱恩 / 卡雅·斯考达里奥 / 李起弘 / 2018-01-26(中国大陆) 上映
-
-
+              {this.state.movie.notes}
             </p>
           </div>
 
         </div>
         <div className="subject_mark clearfix">
           <div className="mark_item ">
-            <a href="javascript:;" className="item_left">
+            <a href="javascript:;" className="item_left1">
               <span>想看</span>
             </a>
-            <a href="javascript:;" className="item_right">
+            <a href="javascript:;" className="item_right1">
               <span>看过</span>
             </a>
           </div>
@@ -68,8 +57,8 @@ export default class Book extends React.Component {
         <div className="subject-intro">
           <h2>移动迷宫3：死亡解药的剧情简介</h2>
           <div className="bd">
-            <p>《移动迷宫3》作为系列最终章，沿袭系列一贯以来的劲爆动作戏和快节奏跑酷风，主要讲述迪伦·奥布莱恩饰演的托马斯率领的好莱坞“跑男团”在...<a className="expand"
-                                                                                       href="javascript:;">(展开)</a></p>
+            <p>{this.state.movie.story}<a className="expand"
+                                          href="javascript:;">(展开)</a></p>
           </div>
         </div>
         <div className="tags">

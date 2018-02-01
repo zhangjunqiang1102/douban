@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './index.less';
 import Nav from "../../components/Nav/Nav";
 import FootLogo from "../../components/FooterLogo/FootLogo";
@@ -29,7 +30,6 @@ export default class RadioDetail extends React.Component {
             this.wrap.style.visibility = 'hidden';
             this.wrap.style.zIndex = -100;
         }
-
     };
     dialogShow = (e) => {
         if (e.target.className.includes("dialog")) {
@@ -41,16 +41,6 @@ export default class RadioDetail extends React.Component {
 
     render() {
         return <div className="radio" onClick={this.dialogShow}>
-      {/*      <div className="radio-publish">
-                <div className="radio-login clearfix">
-                    <div className="radio-login-publish">
-                        <img src="https://img1.doubanio.com/icon/user_normal.jpg" className="dialog"/>
-                    </div>
-                    <div className="radio-holder dialog">登录发广播</div>
-                    <i className="iconfont icon-13 dialog"></i>
-                    <i className="iconfont icon-wenbenbianji dialog"></i>
-                </div>
-            </div>*/}
             <div className="radio-lists">
                 {this.props.radio.map((item, index) => {
                     if (item.status.id === this.props.match.params.id) {
@@ -104,9 +94,7 @@ export default class RadioDetail extends React.Component {
                                                 </div>
                                                 <div className="content">{item.text}</div>
                                             </div>
-                                            <div className="iconfont icon-more" onClick={(e) => {
-                                                this.wrapShow(e)
-                                            }}></div>
+                                            <div className="iconfont icon-more" onClick={(e) => {this.wrapShow(e)}}></div>
                                         </li>
                                     })}
                                 </ul>
@@ -127,7 +115,6 @@ export default class RadioDetail extends React.Component {
                                         </div>
                                     </a>
                                 </div>
-
                                 <div className="radio-diary detail">
                                     <div className="radio-title">
                                         <div className="radio-diary-title">
@@ -146,9 +133,7 @@ export default class RadioDetail extends React.Component {
                                             className="dialog">{item.status.like_count}</span></div>
                                         <div className="iconfont icon-shuaxin dialog"> <span
                                             className="dialog">{item.status.reshares_count}</span></div>
-                                        <div className="iconfont icon-more" onClick={(e) => {
-                                            this.wrapShow(e)
-                                        }}></div>
+                                        <div className="iconfont icon-more" onClick={(e) => {this.wrapShow(e)}}></div>
                                     </div>
                                 </div>
                             </div>
@@ -164,9 +149,7 @@ export default class RadioDetail extends React.Component {
                                             </div>
                                             <div className="content">{item.text}</div>
                                         </div>
-                                        <div className="iconfont icon-more" onClick={(e) => {
-                                            this.wrapShow(e)
-                                        }}></div>
+                                        <div className="iconfont icon-more" onClick={(e) => {this.wrapShow(e)}}></div>
                                     </li>
                                 })}
                             </ul>
@@ -174,30 +157,23 @@ export default class RadioDetail extends React.Component {
                     }
                     return
                 })}
-
-
             </div>
-
             <div className="radio-footer">添加回应</div>
             <div className="radio-wrapper-tip-off" ref={x => this.wrap = x}>
                 <div className="radio-tip-off">
                     举报
                 </div>
             </div>
-
             <div className="radio-wrapper-dialog" ref={x => this.dia = x}>
                 <div className="radio-mask"></div>
                 <div className="radio-dialog dialog">
                     <h2 className="dialog">继续操作需要登录豆瓣账号</h2>
-                    <a href="https://accounts.douban.com/login?source=mobile&redir=https%3A%2F%2Fm.douban.com%2Fstatus%2F"
-                       className='btn btn-login'>登录</a>
-                    <a href="https://www.douban.com/doubanapp/card/get_app?from=mdouban&client_uri=douban%3A%2F%2Fdouban.com%2Ftimeline&model=B&copy=1&page=status&channel=card_popup_continue"
-                       className='btn btn-open'>打开APP</a>
+                    <Link to="/login" className='btn btn-login'>登录</Link>
+                    <a href="https://www.douban.com/doubanapp/card/get_app?from=mdouban&client_uri=douban%3A%2F%2Fdouban.com%2Ftimeline&model=B&copy=1&page=status&channel=card_popup_continue" className='btn btn-open'>打开APP</a>
                     <a href="https://accounts.douban.com/register?source=mobile&redir=https%3A%2F%2Fm.douban.com%2Fstatus%2F"
                        className='btn btn-register'>注册豆瓣账号</a>
                 </div>
             </div>
-
             <FootLogo/>
         </div>
     }

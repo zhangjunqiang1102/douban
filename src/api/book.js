@@ -1,10 +1,11 @@
 
+//获取电影数据
+
 import axios from "./index";
 
 //获取电影数据
 
 export function getBook(){
-
     return axios.get('/book')
 }
 
@@ -12,3 +13,4 @@ export function getBook(){
 export function getBookDetail(id) {
     return axios.get(`/book/${id}`);
 }
+
