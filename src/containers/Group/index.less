@@ -1,145 +1,93 @@
-import React from 'react'
-import './index.less'
-import {connect} from 'react-redux';
-import actions from '../../store/actions/group'
+.group {
+  margin-left: .4rem;
+  h1 {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 0 1em;
+    font-size: .35rem;
+    color: #111;
 
+  }
+  ul {
 
+    li {
 
-@connect(state => ({...state.group}), actions)
-export default class Group extends React.Component {
-    componentDidMount() {
-        if(this.props.group.length===0){
-            this.props.getGroupApi();
+      position: relative;
+      width: 5rem;
+      height: 1.55rem;
+
+      img {
+        position: absolute;
+        left: 0;
+        top: .4rem;
+      }
+      p {
+        position: absolute;
+        left: .9rem;
+        top: 30%;
+
+      }
+      i {
+        position: absolute;
+        right: 0;
+        top: 30%;
+        color: #ccc;
+      }
+      span {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+  }
+  .more {
+    position: relative;
+    color: green;
+    font-size: .25rem;
+    border: .01rem solid #fff;
+    text-align: center;
+
+    a {
+      color: green;
+    }
+  }
+
+  .down-app {
+    padding: 0 0 .2rem 0;
+    margin-top: .5rem;
+    margin-bottom: .3rem;
+    text-align: center;
+    font-size: .15rem;
+
+    .info {
+      margin: 0 auto .45rem;
+      overflow: hidden;
+      text-align: left;
+      font-size: .3rem;
+      display: inline-block;
+      color: #111;
+      width: 100%;
+
+      img {
+        float: left;
+        margin-right: .22rem;
+
+        .info-content {
+          width: 100%;
+
+          strong {
+            font-size: .5rem;
+            font-weight: normal;
+
+            .a {
+              display: block;
+              font-size: 2rem;
+            }
+
+          }
         }
+      }
     }
-    render() {
-        return <div className='group'>
-            <h1>影视</h1>
-            <ul className='group-list'>
-                {this.props.group.map((item,index)=>{
-                    return   <li key={index} className='group-li'>
-                        <img  src={item.itemImg} alt="" className='group-img'/>
-                        <p>{item.itemTitle}</p>
-                        <i>{item.count}</i>
-                        <span>{item.itemDetail}</span>
-                    </li>
-                })}
-            </ul>
-            <li className='more'>
-                <a href="#">
-                    更多相关小组
-                </a>
-            </li>
-            <h1>读书</h1>
-            <ul className='group-list'>
-                {this.props.group.map((item,index)=>{
-                    return   <li key={index} className='group-li'>
-                        <img src={item.itemImg} alt="" className='group-img'/>
-                        <p>{item.itemTitle}</p>
-                        <i>{item.count}</i>
-                        <span>{item.itemDetail}</span>
-                    </li>
-                })}
-            </ul>
-            <li className='more'>
-                <a href="#">
-                    更多相关小组
-                </a>
-            </li>
-            <h1>音乐</h1>
-            <ul className='group-list'>
-                {this.props.group.map((item,index)=>{
-                    return   <li key={index} className='group-li'>
-                        <img src={item.itemImg} alt="" className='group-img'/>
-                        <p>{item.itemTitle}</p>
-                        <i>{item.count}</i>
-                        <span>{item.itemDetail}</span>
-                    </li>
-                })}
-            </ul>
-            <li className='more'>
-                <a href="#">
-                    更多相关小组
-                </a>
-            </li>
-            <h1>近期新租</h1>
-            <ul className='group-list'>
-                {this.props.group.map((item,index)=>{
-                    return   <li key={index} className='group-li'>
-                        <img src={item.itemImg} alt="" className='group-img'/>
-                        <p>{item.itemTitle}</p>
-                        <i>{item.count}</i>
-                        <span>{item.itemDetail}</span>
-                    </li>
-                })}
-            </ul>
-            <li className='more'>
-                <a href="#">
-                    更多相关小组
-                </a>
-            </li>
-            <h1>同城</h1>
-            <ul className='group-list'>
-                {this.props.group.map((item,index)=>{
-                    return   <li key={index} className='group-li'>
-                        <img src={item.itemImg} alt="" className='group-img'/>
-                        <p>{item.itemTitle}</p>
-                        <i>{item.count}</i>
-                        <span>{item.itemDetail}</span>
-                    </li>
-                })}
-            </ul>
-            <li className='more'>
-                <a href="#">
-                    更多相关小组
-                </a>
-            </li>
-            <h1>高校</h1>
-            <ul className='group-list'>
-                {this.props.group.map((item,index)=>{
-                    return   <li key={index} className='group-li'>
-                        <img src={item.itemImg} alt="" className='group-img'/>
-                        <p>{item.itemTitle}</p>
-                        <i>{item.count}</i>
-                        <span>{item.itemDetail}</span>
-                    </li>
-                })}
-            </ul>
-            <li className='more'>
-                <a href="#">
-                    更多相关小组
-                </a>
-            </li>
-            <h1>职场</h1>
-            <ul className='group-list'>
-                {this.props.group.map((item,index)=>{
-                    return   <li key={index} className='group-li'>
-                        <img src={item.itemImg} alt="" className='group-img'/>
-                        <p>{item.itemTitle}</p>
-                        <i>{item.count}</i>
-                        <span>{item.itemDetail}</span>
-                    </li>
-                })}
-            </ul>
-            <li className='more'>
-                <a href="#">
-                    更多相关小组
-                </a>
-            </li>
-
-            <div className='down-app'>
-                <div className='info
-                clearfix'>
-                    <img src="https://img3.doubanio.com/f/talion/7837f29dd7deab9416274ae374a59bc17b5f33c6/pics/card/douban-app-logo.png" width='48px'/>
-                    <div className='info-content '>
-                        <strong>豆瓣</strong>
-                        <p>我们的精神角落</p>
-                    </div>
-                </div>
-                <a href="https://www.douban.com/doubanapp/card/log?category=group_home&cid=&action=click_download&ref=http%3A//www.douban.com/doubanapp/app%3Fchannel%3Dcard_group_home%26direct_dl%3D1" className='a'>去 App Store 免费下载 iOS 客户端</a>
-            </div>
-        </div>
-
-
-    }
+  }
 }
