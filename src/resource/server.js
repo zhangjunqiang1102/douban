@@ -34,13 +34,25 @@ app.get('/mock/home', (req, res) => {
     })
 });
 
-let book = require('./mock/book');
-app.get('/mock/book', (req, res) => {
+
+app.get('/book', (req, res) => {
     read('./mock/book.json', (data) => {
         res.end(JSON.stringify(data))
     })
 });
+app.get('/book/:id', (req, res) => {
 
+    let {id} = req.params;
+    read('./mock/book.json', (data) => {
+
+        data.forEach(item =>{
+            let itemdata= item.bookItems.find(item=>item.bookId === id) || {};
+            if (JSON.stringify(itemdata)!=="{}"){
+                res.end(JSON.stringify(itemdata))
+            }
+        })
+    })
+});
 
 app.get('/movie', (req, res) => {
 
@@ -60,7 +72,6 @@ app.get('/movie/:id', (req, res) => {
             }
         })
     })
-
 });
 
 let radio = require('./mock/radio');

@@ -29,8 +29,6 @@ export default class Movie extends React.Component {
                         <List data={item.moiveItems}/>
 
                     </section>
-
-
                 )
 
             })}

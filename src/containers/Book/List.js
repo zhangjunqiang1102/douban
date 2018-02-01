@@ -9,7 +9,7 @@ export default class List extends React.Component {
         return <div className="list-box">
             <div className="items">
                 {data.map((item, ind) => {
-                    return <Link to={{pathname:`/movie/detail/${item.movieId}`,state:item}} key={ind}>
+                    return <Link to={{pathname:`/book/detail/${item.bookId}`,state:item}} key={ind}>
                         <img src={item.conImg}
                              alt=""/>
                         <span className="item-title">{item.itemName}</span>

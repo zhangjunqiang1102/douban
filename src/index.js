@@ -18,6 +18,7 @@ import Detail from "./containers/Detail/Detail";
 
 import Radio from "./containers/Radio/Radio";
 import MDetail from "./containers/MDetail/MDetail";
+import BDetail from "./containers/BDetail/BDetail";
 
 
 ReactDOM.render(
@@ -27,9 +28,10 @@ ReactDOM.render(
 
                 <Switch>
                     <Route path="/" exact={true} component={Home}/>
-                    <Route path='/movie' component={Movie}/>
-                    <Route path='/book' component={Book}/>
-                    <Route path="/detail/:id" component={MDetail}/>
+                    <Route path='/movie' exact={true} component={Movie}/>
+                    <Route path="/movie/detail/:id" component={MDetail}/>
+                    <Route path='/book' exact={true} component={Book}/>
+                    <Route path='/book/detail/:id' component={BDetail}/>
                     <Route path='/group' component={Group}/>
                     <Route path='/radio' component={Radio}/>
                     <Route path='/search' component={Search}/>
