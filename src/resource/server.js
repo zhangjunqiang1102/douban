@@ -3,8 +3,8 @@ let app = express();
 let fs = require('fs');
 let session = require('express-session');
 app.listen(3000);
-// let bodyParser = require('body-parser');
-// app.use(bodyParser.json());//
+let bodyParser = require('body-parser');
+app.use(bodyParser.json());//
 
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "http://localhost:9000");
@@ -41,13 +41,9 @@ app.get('/book', (req, res) => {
 });
 
 app.get('/movie', (req, res) => {
-<<<<<<< HEAD
-    read('./mock/movie.json', (data) => {
-=======
 
-    console.log('1');
-    read('./mock/Movie.json', (data) => {
->>>>>>> bae55cbef888471c125846f4a050760dcbbdad6e
+    read('./mock/movie.json', (data) => {
+
         res.end(JSON.stringify(data))
     })
 });

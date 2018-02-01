@@ -4,4 +4,4 @@ import axios from "./index";
 
 export function getMovie(){
     return axios.get('/mock/movie')
-};
+}
