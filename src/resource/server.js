@@ -28,45 +28,34 @@ let read = (p, fn) => {
 
 
 let home = require('./mock/home');
-
-
-
-app.get('/home', (req, res) => {
+app.get('/mock/home', (req, res) => {
     read('./mock/home.json', (data) => {
         res.end(JSON.stringify(data))
     })
 });
+
 let book = require('./mock/book');
-
-app.get('/book', (req, res) => {
-
+app.get('/mock/book', (req, res) => {
     read('./mock/book.json', (data) => {
-
         res.end(JSON.stringify(data))
     })
 });
 
-
-app.get('/movie', (req, res) => {
-
+let movie = require('./mock/movie');
+app.get('/mock/movie', (req, res) => {
     read('./mock/movie.json', (data) => {
-
         res.end(JSON.stringify(data))
     })
 });
 
 let radio = require('./mock/radio');
-
-app.get('/radio', (req, res) => {
-
-    read('/radio.json', (data) => {
+app.get('/mock/radio', (req, res) => {
+    read('./mock/radio.json', (data) => {
         res.end(JSON.stringify(data),)
     })
 });
 
 let group = require('./mock/group');
-
-
 app.get('/mock/group', (req, res) => {
     read('./mock/group.json', (data) => {
         res.end(JSON.stringify(data))
