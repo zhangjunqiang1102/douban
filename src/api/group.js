@@ -1,6 +1,5 @@
 import axios from "./index";
-
 //获取小组数据
-export function getGroup(){
+  export function getGroup() {
     return axios.get('/group')
 }

@@ -134,7 +134,7 @@ export default class Group extends React.Component {
                         更多相关小组
                     </a>
                 </ul>
-                
+
                 <h3 className="title">影视</h3>
                 <ul className='group-list'>
                     {this.props.group.map((item, index) => {
