@@ -121,13 +121,6 @@ export default class Group extends React.Component {
                     </li>
                 })}
             </ul>
-            <li className='more'>
-                <a href="#">
-                    更多相关小组
-                </a>
-            </li>
-
-          <FootLogo/>
         </div>
 
 
