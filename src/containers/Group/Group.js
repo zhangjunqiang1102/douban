@@ -6,10 +6,11 @@ import actions from '../../store/actions/group'
 
 
 @connect(state => ({...state.group}), actions)
-
 export default class Group extends React.Component {
     componentDidMount() {
-        this.props.getGroupApi();
+        if(this.props.group.length===0){
+            this.props.getGroupApi();
+        }
     }
     render() {
         return <div className='group'>
@@ -17,7 +18,7 @@ export default class Group extends React.Component {
             <ul className='group-list'>
                 {this.props.group.map((item,index)=>{
                     return   <li key={index} className='group-li'>
-                        <img src={item.itemImg} alt="" className='group-img'/>
+                        <img  src={item.itemImg} alt="" className='group-img'/>
                         <p>{item.itemTitle}</p>
                         <i>{item.count}</i>
                         <span>{item.itemDetail}</span>

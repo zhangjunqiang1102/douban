@@ -41,8 +41,12 @@ app.get('/home', (req, res) => {
 let book = require('./mock/book');
 
 app.get('/book', (req, res) => {
+<<<<<<< HEAD
     console.log('1');
     read('./book.json', (data) => {
+=======
+    read('./mock/book.json', (data) => {
+>>>>>>> 58bdde7bcda6384ae63842a50876094186118116
         res.end(JSON.stringify(data))
     })
 });
@@ -53,10 +57,14 @@ app.get('/home', (req, res) => {
 =======
 
 app.get('/movie', (req, res) => {
+<<<<<<< HEAD
+    read('./mock/movie.json', (data) => {
+=======
 
 >>>>>>> bae55cbef888471c125846f4a050760dcbbdad6e
     console.log('1');
     read('./mock/Movie.json', (data) => {
+>>>>>>> bae55cbef888471c125846f4a050760dcbbdad6e
         res.end(JSON.stringify(data))
     })
 });
@@ -81,10 +89,9 @@ app.get('/group', (req, res) => {
 });
 =======
 
-app.get('/mock/Group', (req, res) => {
+app.get('/mock/group', (req, res) => {
 
-
-    read('./mock/Group.json', (data) => {
+    read('./mock/group.json', (data) => {
         res.end(JSON.stringify(data))
     })
 });
