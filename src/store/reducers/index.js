@@ -1,8 +1,10 @@
 import {combineReducers} from 'redux'
 import movie from './movie'
+
+import book from './book'
+import radio from './radio'
+import group from './group'
 import home from './slider'
-// import homeList from './homeList'
 export default combineReducers({
-  movie,
-home
+  movie,radio, group,book,home
 })

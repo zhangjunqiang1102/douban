@@ -12,5 +12,5 @@ let actions={
             dispatch({type:Types.GET_HOME_LIST,payload:getHome()})
         }
     }
-}
+};
 export default  actions

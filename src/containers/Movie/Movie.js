@@ -9,6 +9,7 @@ import List from "./List";
 export default class Movie extends React.Component {
 
     componentDidMount() {
+
         this.props.getMovieAPI()
     }
 
