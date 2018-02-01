@@ -1,3 +1,4 @@
+
 import *as Types from '../action-types';
 import {getMovie} from '../../api/movie'
 let actions = {
@@ -8,4 +9,5 @@ let actions = {
     }
 }
 export default actions
+
 
