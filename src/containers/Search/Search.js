@@ -5,7 +5,7 @@ import {NavLink} from 'react-router-dom';
 export default class Search extends React.Component {
   render() {
     return <div className="search">
-      <a href="javascript:;" className="close">关闭</a>
+      <a href="javascript:;" className="close" onClick={()=>{this.props.history.goBack()}}>关闭</a>
       <form>
         <div>
           <input type="search" className="query"/>

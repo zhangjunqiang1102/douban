@@ -5,7 +5,7 @@ export default class Profile extends React.Component {
   render() {
     return <div className="wrapper">
       <h1>
-        <a href="javascript:;">取消</a>
+        <a href="javascript:;" onClick={()=>{this.props.history.go(-2)}}>取消</a>
         登录豆瓣
       </h1>
 
