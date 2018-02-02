@@ -74,10 +74,10 @@ export default class Search extends React.Component {
         </li>
       </ul>
       <div className="navBottom">
-        <NavLink to={'/login'}>
+        <NavLink to={'/profile'}>
           <span>注册账号</span>
         </NavLink>
-        <NavLink to={'/Profile'}>
+        <NavLink to={'/login'}>
           <span>登录豆瓣</span>
         </NavLink>
       </div>

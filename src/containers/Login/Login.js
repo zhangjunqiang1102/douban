@@ -2,7 +2,7 @@ import React from 'react';
 import './index.less'
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import actions from '../../store/actions/login';
+import actions from '../../store/actions/session';
 @connect(state=>({...state.session}),actions)
 export default class Login extends React.Component {
     componentWillUnmount(){

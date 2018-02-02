@@ -11,8 +11,9 @@ import Book from "./containers/Book/Book";
 import Group from "./containers/Group/Group";
 import App from "./containers/App";
 import Search from './containers/Search/Search'
-import Detail from "./containers/Detail/Detail";
 import Profile from "./containers/Search/Profile/Profile";
+import Personal from "./containers/Search/Personal/Personal";
+
 import Login from "./containers/Search/Login/Login";
 import Radio from "./containers/Radio/Radio";
 import RadioDetail from "./containers/Radio/Detail";
@@ -29,9 +30,12 @@ ReactDOM.render(
           <Route path="/home" component={Home}/>
 
           <Route path='/group' component={Group}/>
+
           <Route path='/search' component={Search}/>
           <Route path="/profile" component={Profile}/>
           <Route path="/login" component={Login}/>
+          <Route path="/personal" component={Personal}/>
+
           <Route path='/movie' exact={true} component={Movie}/>
           <Route path="/movie/detail/:id" component={MDetail}/>
           <Route path='/book' exact={true} component={Book}/>
