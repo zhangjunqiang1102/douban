@@ -5,6 +5,7 @@ import Nav from "../../components/Nav/Nav";
 import FootLogo from "../../components/FooterLogo/FootLogo";
 import actions from '../../store/actions/radio';
 import {connect} from "react-redux";
+import Loading from "../../components/Loading/Loading";
 
 @connect(state => ({...state}), actions)
 export default class Radio extends React.Component {
@@ -53,7 +54,7 @@ export default class Radio extends React.Component {
                     <i className="iconfont icon-wenbenbianji dialog"></i>
                 </div>
             </div>
-
+            {this.props.radio.length===0?<Loading/>:null}
             {/*列表*/}
             <ul className="radio-lists">
                 {this.props.radio.map((item, index) => {

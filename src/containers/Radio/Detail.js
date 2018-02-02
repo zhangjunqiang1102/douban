@@ -158,7 +158,7 @@ export default class RadioDetail extends React.Component {
                     return
                 })}
             </div>
-            <div className="radio-footer">添加回应</div>
+            <div className="radio-footer dialog">添加回应</div>
             <div className="radio-wrapper-tip-off" ref={x => this.wrap = x}>
                 <div className="radio-tip-off">
                     举报

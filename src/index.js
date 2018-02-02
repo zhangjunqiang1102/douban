@@ -27,7 +27,7 @@ ReactDOM.render(
         <Switch>
           <Route path="/" exact={true} component={Home}/>
           <Route path="/home" component={Home}/>
-          <Route path='/book' component={Book}/>
+
           <Route path='/group' component={Group}/>
           <Route path='/search' component={Search}/>
           <Route path="/profile" component={Profile}/>
