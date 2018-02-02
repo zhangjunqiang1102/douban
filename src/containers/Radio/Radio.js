@@ -139,11 +139,10 @@ export default class Radio extends React.Component {
                 <div className="radio-mask"></div>
                 <div className="radio-dialog dialog">
                     <h2 className="dialog">继续操作需要登录豆瓣账号</h2>
-                    <Link to='/login' className='btn btn-login'>登录</Link>
+                    <Link to='/profile' className='btn btn-login'>登录</Link>
                     <a href="https://www.douban.com/doubanapp/card/get_app?from=mdouban&client_uri=douban%3A%2F%2Fdouban.com%2Ftimeline&model=B&copy=1&page=status&channel=card_popup_continue"
                        className='btn btn-open'>打开APP</a>
-                    <a href="https://accounts.douban.com/register?source=mobile&redir=https%3A%2F%2Fm.douban.com%2Fstatus%2F"
-                       className='btn btn-register'>注册豆瓣账号</a>
+                    <Link to='/login' className='btn btn-register'>注册豆瓣账号</Link>
                 </div>
             </div>
 
