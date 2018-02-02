@@ -13,7 +13,6 @@ export default class Movie extends React.Component {
   }
 
   render() {
-    // console.log(this.props.hot);
 
     return <div>
       {this.props.hot.map((item, index) => {
@@ -27,10 +26,8 @@ export default class Movie extends React.Component {
 
           </section>
         )
-
       })}
 
-      {/*发现好电影*/}
       <section>
         <div className="title-box">
           <h2>发现好电影</h2>
