@@ -32,11 +32,16 @@ export default class RadioDetail extends React.Component {
         }
     };
     dialogShow = (e) => {
-        if (e.target.className.includes("dialog")) {
-            this.dia.style.display = 'block'
-        } else {
-            this.dia.style.display = 'none'
+      if(this.props.session.user){
+        if (e.target.className.includes("dialog")){
+          $(e.target).removeClass("dialog")
         }
+      }
+      if (e.target.className.includes("dialog")) {
+        this.dia.style.display = 'block'
+      } else {
+        this.dia.style.display = 'none'
+      }
     };
 
     render() {

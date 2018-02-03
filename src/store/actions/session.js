@@ -24,7 +24,7 @@ let actions = {
         dispatch({type: Types.SET_USER_INFO, user: data});
         if (data.err === 0) {
           setTimeout(() => {
-            history.push('/home');
+            history.push('/personal');
           }, 1000)
         }
       })
@@ -35,7 +35,6 @@ let actions = {
       toValidate().then(function (data) {
         dispatch({type: Types.SET_USER_INFO, user: data})
       });
-
     }
   }
 };

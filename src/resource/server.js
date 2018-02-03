@@ -7,6 +7,12 @@ app.listen(3000);
 
 let bodyParser = require('body-parser');
 app.use(bodyParser.json());
+app.use(session({
+  resave:true,
+  saveUninitialized:false,
+  secret:'zfpx'
+}));
+
 
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "http://localhost:9000");
@@ -127,7 +133,8 @@ app.post('/profile', function (req, res) {
 });
 app.post('/login', function (req, res) {
     let {username, password} = req.body;
-    password = crypto.createHash('md5').update(password).digest('base64');
+
+  password = crypto.createHash('md5').update(password).digest('base64');
     let user = userList.find(item => (item.username === username) && (item.password === password));
     if (user) {
         req.session.user = username;

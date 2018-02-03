@@ -1,11 +1,12 @@
 .page {
   min-width: 13rem;
   box-sizing: border-box;
-  background-color: #f7f7f7;
+  background: #f7f7f7;
   height: 100%;
   padding-top: .94rem;
   margin: 0 auto;
   overflow-x: hidden;
+  z-index: 200;
 
   .personal {
     height: 2.28rem;
@@ -26,7 +27,7 @@
 
       }
 
-      .detail {
+      .detail-2 {
         height: 100%;
         margin-left: 2.12rem;
         color: #fff;
@@ -34,39 +35,62 @@
 
         .basic-info {
           position: relative;
-          padding-top: .58rem;
+          padding-top: 1rem;
 
-        }
-        .uid {
-          display: block;
-          font-size: .38rem;
-          line-height: 1;
-        }
-
-        .id {
-          display: block;
-          font-size: .24rem;
-          line-height: 1.65;
-
-          .id:after {
-            width: 100%;
-            height: .02rem;
-            background: rgba(255, 255, 255, 0.3);
+          .id {
             display: block;
-            transform: rotateY(0.5);
-            margin-top: .1rem;
+            font-size: .24rem;
+            line-height: 1.65;
           }
 
           a {
             display: block;
             color: #fff;
             position: absolute;
-            right: 0;
-            bottom: 0;
-            padding: .6rem .2rem .16rem .4rem;
+            right: .86rem;
+            bottom: .04rem;
+          }
+        }
+
+        .relationship {
+          margin-top: .3rem;
+
+          a {
+            color: #fff;
+            margin-right: .4rem;
           }
         }
       }
+    }
+
+
+  }
+
+  .collection-2 {
+    background: #fff;
+    overflow: hidden;
+    .item {
+      width: 12%;
+      height: 2rem;
+      text-align: center;
+      float: left;
+      a {
+        font-size: .26rem;
+        color: #9b9b9b;
+        img{
+          display: block;
+          margin: .6rem auto .2rem;
+          width: .52rem;
+          height: .52rem;
+        }
+      }
+    }
+    .hr:after{
+      width: 100%;
+      height: .02rem;
+      background: #dfdfdf;
+      display: block;
+      transform: scaleY(0.5);
     }
   }
 }

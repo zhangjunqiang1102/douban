@@ -22,7 +22,7 @@ export default class Login extends React.Component {
       <div className="mobile-accounts">
         <ul className="dialog">
           <li className="first">
-            <input type="text" placeholder="邮箱 / 手机号 / 用户名" id="username" ref={x => this.username = x}/>
+            <input type="text" placeholder="邮箱 / 手机号" id="username" ref={x => this.username = x}/>
           </li>
           <li className="form-pow">
             <input type="text" placeholder="密码" id="password" ref={x => this.password = x}/>

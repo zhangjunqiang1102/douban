@@ -9,7 +9,7 @@ export default class Detail extends React.Component {
     render() {
         return <div className="detail">
             <Nav/>
-            <div className="detailBanner">
+            <div className="detailBanner-home">
                 <span>下载豆瓣App</span>
                 <p>每天看点好内容</p>
                 <a href="">
