@@ -25,8 +25,8 @@ export default class Home extends  React.Component{
         return <div ref={x=>this.ele=x}>
             <Nav/>
             {this.props.sliders.length?<Slider lists={this.props.sliders}/>: <Loading/>}
-            <HomeList lists={this.props.homeList} />
-            {/*<button onClick={}></button>*/}
+            {this.props.homeList.length?<HomeList lists={this.props.homeList}/>: <Loading/>}
+
         </div>
     }
 }

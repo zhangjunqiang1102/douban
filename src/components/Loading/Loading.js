@@ -1,10 +1,11 @@
 import React from 'react';
 import './load.less'
+import load from '../../common/images/loading_green.gif'
 export default class Loading extends React.Component {
     render(){
         return(
             <div className='loading'>
-                <div className='loader loader--audioWave'></div>
+                <img src={load} alt=""/>
             </div>
         )
     }

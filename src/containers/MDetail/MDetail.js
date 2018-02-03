@@ -2,9 +2,10 @@ import React from 'react'
 import './index.less'
 import {getHome} from '../../api/home';
 import 'babel-polyfill';
+import M_BDetails from "../../components/M_BDetails/M_BDetails";
 
 
-export default class Book extends React.Component {
+export default class MDetail extends React.Component {
   constructor(){
     super();
     this.state = {movie:{}}
@@ -30,19 +31,27 @@ export default class Book extends React.Component {
             </a>
           </div>
           <div className="left">
-            <p className="rating">
-              <span className="rating-stars">
-                <span className="rating-star rating-star-medium-full"> </span>
+            <div className="rating">
+              <M_BDetails className="rating-stars" starts={this.state.movie.starts} startsMins={this.state.movie.startsMins} />
 
-              </span>
-              <strong>{this.state.movie.starts}</strong>
-              <span>{this.state.movie.people}</span>
-            </p>
+
+              <span className="people">{this.state.movie.people}</span>
+            </div>
             <p className="meta">
               {this.state.movie.notes}
             </p>
           </div>
 
+        </div>
+
+
+        <div className="vendors-link" >
+          <a className="link clearfix">
+            <span className="text">电子书/纸质版购买</span>
+            <span className="info">
+            京东商城 45.00元起
+          </span>
+          </a>
         </div>
         <div className="subject_mark clearfix">
           <div className="mark_item ">

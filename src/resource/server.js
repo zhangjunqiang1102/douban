@@ -1,4 +1,5 @@
 let express = require('express');
+let path = require("path");
 let app = express();
 let fs = require('fs');
 let session = require('express-session');
@@ -16,7 +17,7 @@ app.use(function (req, res, next) {
     if (req.method == "OPTIONS") res.send();
     else next();
 });
-
+app.use(express.static(path.resolve(__dirname,"./mock")));
 let read = (p, fn) => {
     fs.readFile(p, 'utf-8', (err, data) => {
         if (err) {
@@ -27,12 +28,14 @@ let read = (p, fn) => {
     })
 };
 
-
 let home = require('./mock/home');
 app.get('/home', (req, res) => {
-    read('./mock/home.json', (data) => {
-        res.end(JSON.stringify(data))
-    })
+    setTimeout(()=>{
+        read('./mock/home.json', (data) => {
+            res.end(JSON.stringify(data))
+        })
+    },2500)
+
 });
 
 
@@ -89,18 +92,23 @@ app.get('/radio', (req, res) => {
 
 let group = require('./mock/group');
 app.get('/group', (req, res) => {
-    read('./mock/group.json', (data) => {
-        res.end(JSON.stringify(data))
-    })
+
+        read('./mock/group.json', (data) => {
+            res.end(JSON.stringify(data))
+        })
+
+
 });
 
 let sliders = require('./mock/sliders');
 app.get('/sliders', (req, res) => {
-    console.log('1');
-    read('./mock/sliders.json', (data) => {
-        res.end(JSON.stringify(data))
-    })
+    setTimeout(()=>{
+        read('./mock/sliders.json', (data) => {
+            res.end(JSON.stringify(data))
+        })
+    },500)
 });
+
 
 
 let userList = []; // 用户信息

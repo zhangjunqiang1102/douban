@@ -23,24 +23,19 @@
     }
 
     .left {
-
       .rating {
+        position: relative;
+        display: block;
         line-height: .18rem;
         font-size: .23rem;
-        color: #494949;
-        .rating-stars {
-          width: .7rem*2;
-          height: .18rem;
-          border: .02rem solid #494949;
+
+        .people {
+          color: #aaa;
+          position: absolute;
+
+          top: .04rem;
+          left: 1.6rem;
         }
-      }
-      strong {
-        font-weight: normal;
-        color: #494949;
-        padding-right: .08rem
-      }
-      span {
-        color: #aaa;
       }
       .meta {
         color: #494949;
@@ -51,6 +46,37 @@
       }
 
     }
+
+  }
+  .vendors-link{
+    font-size: 15px;
+    height: 44px;
+    padding: 0 18px 10px 0;
+    line-height: 24px;
+    .link{
+      display: inline-block;
+      border-bottom: 1px solid #e1e1e1;
+      border-top:1px solid #e1e1e1;
+      line-height: 40px;
+      width: 100%;
+      color: #42bd56;
+      .text{
+        color: #42bd56;
+      }
+      .info{
+        display: inline-block;
+        color: #ccc;
+        font-size: 14px;
+        float: right;
+      }
+
+
+    }
+
+
+
+
+
 
   }
   .subject_mark {

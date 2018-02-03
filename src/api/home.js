@@ -5,6 +5,9 @@ import axios from './index';
 export let getHome=()=>{
     return axios.get('/home')
 };
+export function getHomeDetail(id) {
+    return axios.get(`/home/${id}`);
+}
 
 
 

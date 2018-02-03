@@ -6,7 +6,7 @@
     "bookItems":[
       {
         "bookId":"hot_1",
-        "conImg":"https://img3.doubanio.com/view/freyr_page_photo/raw/public/2206.jpg",
+        "conImg":"http://localhost:3000/images/book1.jpg",
         "itemName":"城市之光",
         "starts":"4.2",
         "notes":"150分钟 / 剧情 / 音乐 / 阿德瓦·香登(导演) / 塞伊拉·沃西 / 梅·维贾 / 阿米尔·汗 / 2018-01-19(中国大陆) 上映",
@@ -16,7 +16,7 @@
       },
       {
         "bookId":"hot_2",
-        "conImg":"https://img3.doubanio.com/view/freyr_page_photo/raw/public/2206.jpg",
+        "conImg":"http://localhost:3000/images/book1.jpg",
         "itemName":"城市之光",
         "starts":"",
         "notes":"150分钟 / 剧情 / 音乐 / 阿德瓦·香登(导演) / 塞伊拉·沃西 / 梅·维贾 / 阿米尔·汗 / 2018-01-19(中国大陆) 上映",
@@ -26,7 +26,7 @@
       },
       {
         "bookId":"hot_3",
-        "conImg":"https://img3.doubanio.com/view/freyr_page_photo/raw/public/2206.jpg",
+        "conImg":"http://localhost:3000/images/book1.jpg",
         "itemName":"城市之光",
         "starts":"2.7",
         "notes":"150分钟 / 剧情 / 音乐 / 阿德瓦·香登(导演) / 塞伊拉·沃西 / 梅·维贾 / 阿米尔·汗 / 2018-01-19(中国大陆) 上映",
@@ -36,7 +36,7 @@
       },
       {
         "bookId":"hot_4",
-        "conImg":"https://img3.doubanio.com/view/freyr_page_photo/raw/public/2206.jpg",
+        "conImg":"http://localhost:3000/images/book1.jpg",
         "itemName":"城市之光",
         "starts":"4.5",
         "notes":"150分钟 / 剧情 / 音乐 / 阿德瓦·香登(导演) / 塞伊拉·沃西 / 梅·维贾 / 阿米尔·汗 / 2018-01-19(中国大陆) 上映",
@@ -46,7 +46,7 @@
       },
       {
         "bookId":"hot_5",
-        "conImg":"https://img3.doubanio.com/view/freyr_page_photo/raw/public/2206.jpg",
+        "conImg":"http://localhost:3000/images/book1.jpg",
         "itemName":"城市之光",
         "starts":"4",
         "notes":"150分钟 / 剧情 / 音乐 / 阿德瓦·香登(导演) / 塞伊拉·沃西 / 梅·维贾 / 阿米尔·汗 / 2018-01-19(中国大陆) 上映",
@@ -56,7 +56,7 @@
       },
       {
         "bookId":"hot_6",
-        "conImg":"https://img3.doubanio.com/view/freyr_page_photo/raw/public/2206.jpg",
+        "conImg":"http://localhost:3000/images/book1.jpg",
         "itemName":"城市之光",
         "starts":"4",
         "notes":"150分钟 / 剧情 / 音乐 / 阿德瓦·香登(导演) / 塞伊拉·沃西 / 梅·维贾 / 阿米尔·汗 / 2018-01-19(中国大陆) 上映",
@@ -72,7 +72,7 @@
     "bookItems":[
       {
         "bookId":"free_1",
-        "conImg":"https://img3.doubanio.com/view/freyr_page_photo/raw/public/1974.jpg",
+        "conImg":"http://localhost:3000/images/book2.jpg",
         "itemName":"自由与爱之地",
         "starts":"4",
         "notes":"150分钟 / 剧情 / 音乐 / 阿德瓦·香登(导演) / 塞伊拉·沃西 / 梅·维贾 / 阿米尔·汗 / 2018-01-19(中国大陆) 上映",
@@ -82,7 +82,7 @@
       },
       {
         "bookId":"free_2",
-        "conImg":"https://img3.doubanio.com/view/freyr_page_photo/raw/public/1974.jpg",
+        "conImg":"http://localhost:3000/images/book2.jpg",
         "itemName":"自由与爱之地",
         "starts":"3.3",
         "notes":"150分钟 / 剧情 / 音乐 / 阿德瓦·香登(导演) / 塞伊拉·沃西 / 梅·维贾 / 阿米尔·汗 / 2018-01-19(中国大陆) 上映",
@@ -92,7 +92,7 @@
       },
       {
         "bookId":"free_3",
-        "conImg":"https://img3.doubanio.com/view/freyr_page_photo/raw/public/1974.jpg",
+        "conImg":"http://localhost:3000/images/book2.jpg",
         "itemName":"自由与爱之地",
         "starts":"4.2",
         "notes":"150分钟 / 剧情 / 音乐 / 阿德瓦·香登(导演) / 塞伊拉·沃西 / 梅·维贾 / 阿米尔·汗 / 2018-01-19(中国大陆) 上映",
@@ -102,7 +102,7 @@
       },
       {
         "bookId":"free_4",
-        "conImg":"https://img3.doubanio.com/view/freyr_page_photo/raw/public/1974.jpg",
+        "conImg":"http://localhost:3000/images/book2.jpg",
         "itemName":"自由与爱之地",
         "starts":"4.5",
         "notes":"150分钟 / 剧情 / 音乐 / 阿德瓦·香登(导演) / 塞伊拉·沃西 / 梅·维贾 / 阿米尔·汗 / 2018-01-19(中国大陆) 上映",
@@ -112,7 +112,7 @@
       },
       {
         "bookId":"free_5",
-        "conImg":"https://img3.doubanio.com/view/freyr_page_photo/raw/public/1974.jpg",
+        "conImg":"http://localhost:3000/images/book2.jpg",
         "itemName":"自由与爱之地",
         "starts":"4.5",
         "notes":"150分钟 / 剧情 / 音乐 / 阿德瓦·香登(导演) / 塞伊拉·沃西 / 梅·维贾 / 阿米尔·汗 / 2018-01-19(中国大陆) 上映",

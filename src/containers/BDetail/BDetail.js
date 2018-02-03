@@ -2,10 +2,11 @@ import React from 'react'
 import './index.less'
 import {getHome} from '../../api/home';
 import 'babel-polyfill';
+import M_BDetails from "../../components/M_BDetails/M_BDetails";
 
 
 
-export default class Book extends React.Component {
+export default class BDetail extends React.Component {
   constructor(){
     super();
     this.state = {book:{}}
@@ -31,16 +32,16 @@ export default class Book extends React.Component {
             </a>
           </div>
           <div className="left">
-            <p className="rating">
-              <span className="rating-stars">
-                <span className="rating-star rating-star-medium-full"> </span>
+            <div className="rating">
 
-              </span>
-              <strong>{this.state.book.starts}</strong>
-              <span>{this.state.book.people}</span>
-            </p>
+
+<M_BDetails className="rating-stars" starts={this.state.book.starts} startsMins={this.state.book.startsMins} />
+
+
+
+              <span className="people">{this.state.book.people}</span>
+            </div>
             <p className="meta">
-
               {this.state.book.notes}
 
             </p>
