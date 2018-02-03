@@ -43,7 +43,7 @@ let book = require('./mock/book');
 
 app.get('/book', (req, res) => {
     read('./mock/book.json', (data) => {
-        res.end(JSON.stringify(data))
+        setTimeout(()=>{res.end(JSON.stringify(data))},1200);
     })
 });
 
@@ -51,7 +51,7 @@ app.get('/book', (req, res) => {
 let movie = require('./mock/movie');
 app.get('/book/:id', (req, res) => {
     let {id} = req.params;
-    read('/book.json', (data) => {
+    read('./mock/book.json', (data) => {
         data.forEach(item => {
             let itemdata = item.bookItems.find(item => item.bookId === id) || {};
             if (JSON.stringify(itemdata) !== "{}") {
@@ -64,7 +64,7 @@ app.get('/book/:id', (req, res) => {
 
 app.get('/movie', (req, res) => {
     read('./mock/movie.json', (data) => {
-        res.end(JSON.stringify(data))
+        setTimeout(()=>{res.end(JSON.stringify(data))},1200);
     })
 });
 

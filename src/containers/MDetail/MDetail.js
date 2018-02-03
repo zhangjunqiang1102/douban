@@ -1,6 +1,6 @@
 import React from 'react'
 import './index.less'
-import {getHome} from '../../api/home';
+import {getMovieDetail} from '../../api/movie';
 import 'babel-polyfill';
 import M_BDetails from "../../components/M_BDetails/M_BDetails";
 
@@ -14,7 +14,7 @@ export default class MDetail extends React.Component {
     let movie = this.props.location.state;
     console.log(movie);
     if(!movie){
-      movie = await getHome(this.props.match.params.movieId);
+      movie = await getMovieDetail(this.props.match.params.id);
     }
     this.setState({movie});
   }
