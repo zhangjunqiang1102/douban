@@ -8,7 +8,6 @@ import Loading from "../../components/Loading/Loading";
 
 @connect(state => ({...state.movie}), actions)
 export default class Movie extends React.Component {
-
     componentDidMount() {
         if (this.props.hot.length === 0) {
             this.props.getMovieAPI()
