@@ -1,6 +1,6 @@
 import React from 'react'
 import './index.less'
-import {getHome} from '../../api/home';
+import {getBookDetail} from '../../api/book';
 import 'babel-polyfill';
 import M_BDetails from "../../components/M_BDetails/M_BDetails";
 
@@ -15,7 +15,7 @@ export default class BDetail extends React.Component {
     let book = this.props.location.state;
     console.log(book);
     if(!book){
-      book = await getHome(this.props.match.params.bookId);
+      book = await getBookDetail(this.props.match.params.id);
     }
     this.setState({book});
   }
