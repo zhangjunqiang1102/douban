@@ -2,7 +2,7 @@ import  * as Types from '../action-types'
 let initState={
     sliders:[],
     homeList:[]
-}
+};
 
 function home(state=initState,action) {
     switch (action.type) {

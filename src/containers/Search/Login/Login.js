@@ -1,27 +1,48 @@
 import React from 'react'
+import {Link} from "react-router-dom"
 import "./index.less"
+import {connect} from "react-redux"
+import actions from "../../../store/actions/session";
 
+@connect(state => ({...state.session}), actions)
 export default class Login extends React.Component {
+
+  componentWillUnmount(){
+    this.props.clearMessage();
+  }
+
   render() {
-    return <div className="content">
-      <div className="content1">
-        <h1 className="title-">欢迎加入豆瓣</h1>
-        <div className="phone">
-          <input type="text" placeholder="手机号 / 邮箱"/>
-        </div>
-        <div className="password">
-          <input type="text" placeholder="密码 (最少6位)"/>
-        </div>
-        <div className="name">
-          <input type="text" placeholder="昵称"/>
-        </div>
-        <div className="opt-area">
-          <button>下一步</button>
-          <p>
-            <span>点击「下一步」代表你已阅读并同意</span>
-            <a href="https://www.douban.com/about/agreement">用户使用协议</a>
-          </p>
-        </div>
+    return <div className="wrapper">
+      <h1>
+        <a href="javascript:;" onClick={() => {
+          this.props.history.go(-2)
+        }}>取消</a>
+        登录豆瓣
+      </h1>
+      <div className="mobile-accounts">
+        <ul className="dialog">
+          <li className="first">
+            <input type="text" placeholder="邮箱 / 手机号 / 用户名" id="username" ref={x => this.username = x}/>
+          </li>
+          <li className="form-pow">
+            <input type="text" placeholder="密码" id="password" ref={x => this.password = x}/>
+          </li>
+          <li className="submit-button">
+            <div>
+              {/*如果有错误 显示错误信息 如果有成功信息显示成功信息*/}
+              {this.props.err === 1 ? <p style={{color: 'red'}}>{this.props.msg}</p> : null}
+              {this.props.success.length ? <p style={{color: 'green'}}>{this.props.success}</p> : null}
+            </div>
+            <input type="submit" value="登录" onClick={() => {
+              this.props.toLoginAPI(this.username.value, this.password.value, this.props.history)
+            }}/>
+          </li>
+        </ul>
+        <li className="registered">
+          <div className="btn-wrapper">
+            <Link to={"/profile"}>注册豆瓣帐号</Link>
+          </div>
+        </li>
       </div>
     </div>
   }

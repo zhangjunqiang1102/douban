@@ -2,7 +2,7 @@ import axios from './index';
 
 // 注册接口 {user:null,msg:'',success,err}
 export function toReg(username,password) {
-    return axios.post('/reg',{username,password});
+    return axios.post('/profile',{username,password});
 }
 // 登录接口
 export function toLogin(username,password) {
