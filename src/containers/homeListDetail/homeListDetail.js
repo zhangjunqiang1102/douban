@@ -7,7 +7,7 @@ import footer from '../../components/FooterLogo/doban_bottom.jpg';
 
 export default class Detail extends React.Component {
     render() {
-        return <div className="detail">
+        return <div className="detail-hone">
             <Nav/>
             <div className="detailBanner-home">
                 <span>下载豆瓣App</span>

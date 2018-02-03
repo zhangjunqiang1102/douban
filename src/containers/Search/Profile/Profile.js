@@ -31,16 +31,14 @@ export default class Profile extends React.Component {
             let re = /^\d{6,18}$/;
 
             if (ph.test(this.username.value) || em.test(this.username.value)) {
-              this.props.toRegAPI(this.username.value, this.password.value, this.props.history);
+              if (re.test(this.password.value)) {
+                this.props.toRegAPI(this.username.value, this.password.value, this.props.history);
+              } else {
+                alert("您输入的密码格式错误")
+              }
             } else {
               alert('您输入的手机号格式错误')
             }
-            if (re.test(this.password.value)) {
-              this.props.toRegAPI(this.username.value, this.password.value, this.props.history);
-            } else {
-              alert("您输入的密码格式错误")
-            }
-
           }}>下一步
           </button>
           <p>
